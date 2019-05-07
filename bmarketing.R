@@ -34,7 +34,6 @@ bmarketing %>%
 #################Decision Tree#################
 library(rpart)
 library(rpart.plot)
-library(caret)
 
 dt_model<- rpart(y ~ ., data = bmarketing)
 rpart.plot(dt_model)
