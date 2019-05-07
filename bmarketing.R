@@ -1,7 +1,7 @@
 library(tidyverse)
 
 #################Loading data into the environment#################
-bmarketing <- read.csv2("bank.csv")
+bmarketing <- read.csv2("bmarketing.csv")
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
