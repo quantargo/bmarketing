@@ -7,16 +7,3 @@ Depends: R (>= 3.5.2)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-
-
-#' Load a predictions
-#'
-#' This function prepare predictions.
-#'
-#' @param 1 - model, data
-#' @return predictions
-#' @export
-predictions <- function(dt_model, bmarketing)
-{
-  predict(dt_model, bmarketing, type = "class")
-}
