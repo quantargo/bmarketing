@@ -1,11 +1,6 @@
 library(tidyverse)
 
-#################Loading data into the environment#################
-<<<<<<< HEAD
 bmarketing <- read.csv2("bmarketing.csv", dec = ".")
-=======
-bmarketing <- read.csv2("bmarketing.csv",dec = ".")
->>>>>>> f14dc79c03589411b8ee9a086fbb6d2d557d1b7f
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
