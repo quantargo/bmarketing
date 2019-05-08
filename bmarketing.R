@@ -1,7 +1,7 @@
 library(tidyverse)
 
 #################Loading data into the environment#################
-bmarketing <- read.csv2("bmarketing.csv")
+bmarketing <- read_csv2("bmarketing.csv", col_types = cols(euribor3m = col_number()))
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
