@@ -22,5 +22,6 @@ This means:
 \code{clean} returns a clean data set.
 }
 \examples{
-clean(data)
+data(bmarketing)
+clean(bmarketing)
 }
