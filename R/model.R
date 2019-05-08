@@ -20,7 +20,10 @@
 
 model <- function(input_data,target_name) {
   library(rpart)
-  dt_model<- rpart(input_data[[target_name]] ~ ., data = input_data)
+  library(rpart.plot)
+  
+  dt_model<- rpart(y ~ ., data = input_data)
+  rpart.plot(dt_model)
   return (dt_model)
 }
 
