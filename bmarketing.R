@@ -1,7 +1,3 @@
-#install.packages('tidyverse')
-#install.packages('rpart.plot')
-
-##########################################3
 library(tidyverse)
 
 #################Loading data into the environment#################
@@ -27,11 +23,6 @@ if(length(which(is.na(bmarketing$y)==TRUE)>0)){
 # Let's find the range of individual variables
 summary(bmarketing)
 
-bmarketing$emp.var.rate <- as.numeric(bmarketing$emp.var.rate)
-bmarketing$cons.price.idx <- as.numeric(bmarketing$cons.price.idx)
-bmarketing$cons.conf.idx <- as.numeric(bmarketing$cons.conf.idx)
-bmarketing$euribor3m <- as.numeric(bmarketing$euribor3m)
-bmarketing$nr.employed <- as.numeric(bmarketing$nr.employed)
 
  
 ## ------------------------------------------------------------------------
