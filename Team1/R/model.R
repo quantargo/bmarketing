@@ -1,4 +1,4 @@
-#'Function to histogram
+#'Function to model
 #'
 #'
 #'
