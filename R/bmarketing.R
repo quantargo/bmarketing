@@ -1,7 +1,7 @@
 library(tidyverse)
 
 #################Loading data into the environment#################
-bmarketing <- read_csv2("bmarketing.csv", col_types = cols(euribor3m = col_number()))
+bmarketing <- read_csv2("data/bmarketing.csv", col_types = cols(euribor3m = col_number()))
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
@@ -24,8 +24,8 @@ if(length(which(is.na(bmarketing$y)==TRUE)>0)){
 summary(bmarketing)
 
 ## ------------------------------------------------------------------------
-bmarketing %>% 
-  ggplot() + geom_histogram(aes(age), bins = 30) + 
+bmarketing %>%
+  ggplot() + geom_histogram(aes(age), bins = 30) +
   geom_vline(aes(xintercept= median(age)), color = "red")
 
 # TODO: do boxplots for each data
