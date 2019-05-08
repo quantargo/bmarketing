@@ -1,7 +1,7 @@
 library(tidyverse)
 
 #################Loading data into the environment#################
-bmarketing <- read.csv2("bmarketing.csv",dec = ".")
+bmarketing <- read.csv2("data/bmarketing.csv",dec = ".")
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
@@ -32,12 +32,24 @@ bmarketing %>%
 # boxplot(duration~y,data=bmarketing_sub,col="red")
 
 #################Decision Tree#################
-library(rpart)
-library(rpart.plot)
 
-dt_model<- rpart(y ~ ., data = bmarketing)
-rpart.plot(dt_model)
-summary(dt_model)
+#install.packages(c("rpart","rpart.plot"))
+
+model <- function(input_data,target_name) {
+  library(rpart)
+  dt_model<- rpart(input_data[[target_name]] ~ ., data = input_data)
+  return (dt_model)
+}
+
+plot_model <- function(model) {
+  library(rpart.plot)
+  rpart.plot(dt_model)
+}
+
+#model(input_data=bmarketing,target_name="y")
+#plot_model(model(input_data=bmarketing,target_name="y"))
+#plot_model(model=dt_model)
+
 
 #################Testing Decision Tree #################
 predictions <- predict(dt_model, bmarketing, type = "class")
