@@ -21,7 +21,7 @@ clean_data <- function(filename, target_var, na_threshold = 0.5, ...) {
   exclude_index <- vapply(data, function(x) mean(is.na(x)), numeric(1)) > na_threshold
   
   ## give clear warnings for all other variables which contain NA’s.
-  if (sum(check_index) > 0) warning(paste("Column(s)", paste(colnames(data[check_index]), collapse = ", "), "have too many NAs and will be excluded"))
+  if (sum(exclude_index) > 0) warning(paste("Column(s)", paste(colnames(data[exclude_index]), collapse = ", "), "have too many NAs and will be excluded"))
   
   data[, !exclude_index]
 }
