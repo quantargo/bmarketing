@@ -1,9 +1,18 @@
 context("clean_data")
 
-test_import <- function() {
-  ## create test data for test
-  ##expect_error()    check if error is thrown in the case of missing target_var
-  ##expect_warning()  check if warnings are thrown
-  ##expect_equal()    check ncol of result
-  expect_equal(1, 1)
-}
+file1 <- system.file("data/bmarketing.csv", package = "bmarketing", mustWork = TRUE)
+file2 <- system.file("data/bmarketing_with_nas.csv", package = "bmarketing", mustWork = TRUE)
+
+test_that("import and data cleansing works", {
+  ## expected no of rows received
+  expect_equal(nrow(clean_data(file1, target_var = "y")), 4119)
+  ## check if error is thrown in the case of missing target_var
+  expect_error(clean_data(file1, target_var = "unknown"))    
+})
+
+test_that("handling of NAs works", {
+  ## check if warnings are thrown 
+  expect_warning(clean_data(file2, target_var = "y"), regexp = "will be excluded$")  
+  ## check if columns are excluded
+  expect_equal(ncol(clean_data(file2, target_var = "y"))  , 18)
+})
