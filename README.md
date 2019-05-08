@@ -1,11 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![Travis Build
-Status](https://travis-ci.org/Quantargo/bmarketing.svg?branch=master)](https://travis-ci.org/Quantargo/bmarketing)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/Quantargo/bmarketing/master.svg)](https://codecov.io/github/Quantargo/bmarketing?branch=master)
-
 ## Overview
 
 This package offers a series of functions that will clean, transform and
@@ -33,5 +28,3 @@ model\_predict: Returns the predicted classes from the decision tree.
 
 model\_performance : This functions calculated the accuracy of the
 model.
-
-<!-- TODO: Change README to make it more descriptive, add examples, etc. -->
