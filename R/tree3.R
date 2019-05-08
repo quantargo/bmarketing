@@ -40,7 +40,10 @@ rpart.plot(dt_model)
 summary(dt_model)
 
 #################Testing Decision Tree #################
-predictions <- predict(dt_model, bmarketing, type = "class")
+predictions <- function(bmarketing, dt_model)
+{
+  predict(dt_model, bmarketing, type = "class")
+}
 
 ## Compute the accuracy
 mean(bmarketing$y == predictions)
