@@ -3,7 +3,7 @@
 #'
 #' This function applies logarithm on the sent values and transforms numerical data to categories and vice versa
 #' In case of null values, these are replaced with the mean of the interval for numerical data.
-transform_log <- function(dataset) {
+transform <- function(dataset) {
 
   # Taking care of missing data & log
   dataset$age <- ifelse(is.na(dataset$age),
