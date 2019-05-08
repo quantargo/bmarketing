@@ -2,7 +2,7 @@
 library(tidyverse)
 
 #################Loading data into the environment#################
-bmarketing <- read.csv2("bmarketing.csv")
+bmarketing <- read.csv2("data/bmarketing.csv")
 
 # correct data types
 bmarketing$emp.var.rate<-as.numeric(as.character(bmarketing$emp.var.rate)) 
