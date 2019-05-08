@@ -5,11 +5,11 @@ library(tidyverse)
 bmarketing <- read.csv2("bmarketing.csv")
 
 # correct data types
-bmarketing$emp.var.rate<-as.numeric(bmarketing$emp.var.rate) 
-bmarketing$cons.price.idx<-as.numeric(bmarketing$cons.price.idx)
-bmarketing$cons.conf.idx<-as.numeric(bmarketing$cons.conf.idx)
-bmarketing$euribor3m<-as.numeric(bmarketing$euribor3m)
-bmarketing$nr.employed<-as.numeric(bmarketing$nr.employed)
+bmarketing$emp.var.rate<-as.numeric(as.character(bmarketing$emp.var.rate)) 
+bmarketing$cons.price.idx<-as.numeric(as.character(bmarketing$cons.price.idx))
+bmarketing$cons.conf.idx<-as.numeric(as.character(bmarketing$cons.conf.idx))
+bmarketing$euribor3m<-as.numeric(as.character(bmarketing$euribor3m))
+bmarketing$nr.employed<-as.numeric(as.character(bmarketing$nr.employed))
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
