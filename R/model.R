@@ -12,8 +12,8 @@
 #' Model-Plot: We shall implement a function to present a nice representation of the model, e.g. for a decision tree we should plot the tree and respective nodes.
 #'   
 #' @examples
-#' model(input_data = table,target_name="y")
-#' plot_model(model=dt_model)
+#' data("bmarketing")
+#' dt_model <- model(input_data = bmarketing,target_name="y")
 #' @export
 
 model <- function(input_data,target_name) {

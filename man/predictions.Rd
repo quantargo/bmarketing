@@ -10,5 +10,7 @@ predictions(dt_model, bmarketing)
 \code{predictions} returns predictions.
 }
 \examples{
-predictions(model, data)
+data("bmarketing")
+dt_model <- model(input_data = bmarketing,target_name="y")
+predictions(dt_model, bmarketing)
 }

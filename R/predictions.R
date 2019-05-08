@@ -2,11 +2,12 @@
 #'
 #' \code{predictions} returns predictions.
 #'
-#'
-#' @param model.
-#' @param data.
+#' @param dt_model model
+#' @param bmarketing data
 #' @examples
-#' predictions(model, data)
+#' data("bmarketing")
+#' dt_model <- model(input_data = bmarketing,target_name="y")
+#' predictions(dt_model, bmarketing)
 #' @export
 
 predictions <- function(dt_model, bmarketing)

@@ -21,6 +21,6 @@ Model-Plot: We shall implement a function to present a nice representation of th
 \code{clean} returns a decision tree model.
 }
 \examples{
-model(input_data = table,target_name="y")
-plot_model(model=dt_model)
+data("bmarketing")
+dt_model <- model(input_data = bmarketing,target_name="y")
 }
