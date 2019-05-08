@@ -1,27 +1,27 @@
 #' Cleaning function
 #' 
-#' blabla
+#' Data is read in from a csv file using \code{\link{readr::read_csv2}}
 #'
 #' @param filename character, filename
 #' @param target_var character, columnname of dataframe which acts as the target variable 
+#' @param ... args forwarded to \code{\link{readr::read_csv2}}
 #'
 #' @return data.frame, excluding columns with too many NAs
 #' @export
-#'
-#' @examples
-clean_data <- function(filename, target_var) {
-  data <- read_csv2(filename)
+clean_data <- function(filename, target_var, na_threshold = 0.5, ...) {
+  data <- read_csv2(filename, ...)
   
-  target_df <- data %>% select(target_var)
-  others_df <- data %>% select(-target_var)
+  stopifnot(nrow(data) > 0)
+  stopifnot(target_var %in% colnames(data))
+  stopifnot(ncol(data) > 1)
   
-  if any(is.na(target_df[[1]])) stop("Target Var should not include any NAs")
+  ## return an error if the target variable contains any missing values (NA’s).
+  if (any(is.na(data[[target_var]]))) stop("Target Var should not include any NAs")
   
-  na_per <- lapply(others_df, function(x) mean(is.na(x))) %>% unlist
+  exclude_index <- vapply(data, function(x) mean(is.na(x)), numeric(1)) > na_threshold
   
-  cols_nas_too_high <- which(na_per > 0.5)
+  ## give clear warnings for all other variables which contain NA’s.
+  if (sum(check_index) > 0) warning(paste("Column(s)", paste(colnames(data[check_index]), collapse = ", "), "have too many NAs and will be excluded"))
   
-  if (length(cols_nas_too_high) > 0) warning(paste0("Columns", paste(colnames(others_df[cols_nas_too_high]), collapse = ","), "have too many NAs"))
-  
-  bind_cols(target_df, others_df[, -cols_nas_too_high] )
+  data[, !exclude_index]
 }
