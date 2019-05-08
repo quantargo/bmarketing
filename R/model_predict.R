@@ -7,7 +7,7 @@
 #' @param data df data.frame , received by \code{\link{clean_data}} 
 #' @param . 
 #'
-#' @return
+#' @return data df data.frame
 #' @export
 #'
 #' @examples
