@@ -9,3 +9,5 @@
 predictions <- function(dt_model, bmarketing)
 {
   predict(dt_model, bmarketing, type = "class")
+
+
