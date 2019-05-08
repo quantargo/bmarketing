@@ -17,7 +17,8 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The bmarketing dataset
+This package is dedicated to classification analysis using decision trees. Except decision tree model build and predictions it has got all necessary supporting
+tools - data cleaning, transformation function, plot of the results and calculation of accuracy and confusion matrix. 
 
 <!-- TODO: Change README to make it more descriptive, add examples, etc. -->
 
