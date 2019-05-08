@@ -16,8 +16,6 @@
 #' plot_model(model=dt_model)
 #' @export
 
-
-
 model <- function(input_data,target_name) {
   library(rpart)
   library(rpart.plot)
