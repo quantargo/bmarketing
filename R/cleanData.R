@@ -18,7 +18,7 @@ cleanData <- function( ds, targetVar )
     stop(targetVar || "variable not part of the dataframe passed")
   
   #Secondly checking if target variable contains any NA's values.
-  if(length(which(is.na(ds$targetVar)==TRUE)>0)){
+  if(length(which(is.na(ds$targetVar)==TRUE))>0){
     print("Missing Value found in the specified column")
   } else{
     print("Target Variable looks clean. No NA values")
