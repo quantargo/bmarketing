@@ -6,11 +6,6 @@
 \usage{
 predictions(dt_model, bmarketing)
 }
-\arguments{
-\item{dt_model}{model}
-
-\item{bmarketing}{data}
-}
 \description{
 \code{predictions} returns predictions.
 }
