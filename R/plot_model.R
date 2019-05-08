@@ -20,5 +20,5 @@
 
 plot_model <- function(model) {
   library(rpart.plot)
-  rpart.plot(dt_model)
+  rpart.plot(model)
 }
