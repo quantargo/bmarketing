@@ -12,7 +12,7 @@
 #' Model-Plot: We shall implement a function to present a nice representation of the model, e.g. for a decision tree we should plot the tree and respective nodes.
 #'   
 #' @examples
-#' model(input_data = table,raget_name="y")
+#' model(input_data = table,target_name="y")
 #' plot_model(model=dt_model)
 #' @export
 
