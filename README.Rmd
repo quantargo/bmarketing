@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The bmarketing dataset
+The bmarketing package contains multiple functions. There is a function to clean the data, the functions to transform the data (logarithmic transformation, numeric to factors and vice versa), and multiple functions to build the model using decision tree algorithm, summarize the model and make predictions based on it.
 
 <!-- TODO: Change README to make it more descriptive, add examples, etc. -->
 
