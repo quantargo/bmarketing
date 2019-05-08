@@ -9,7 +9,7 @@
 #' @return data.frame, excluding columns with too many NAs
 #' @export
 clean_data <- function(filename, target_var, na_threshold = 0.5, ...) {
-  data <- read_csv2(filename, ...)
+  data <- suppressMessages(read_csv2(filename, ...))
   
   stopifnot(nrow(data) > 0)
   stopifnot(target_var %in% colnames(data))
