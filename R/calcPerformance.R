@@ -4,7 +4,7 @@
 #' @param \code{y} Target variable (class or numeric)
 #' @return Gives back a classification report containing the Confusion Matrix, Sensitivity, Specificity, Precision and Accuracy
 #' @examples
-#' calcDTPerformance(y = bmarketing$y, y_pred = predictions)
+#' calcPerformance(y = bmarketing$y, y_pred = predictions)
 #' @export
 #' 
 calcPerformance <- function(y, y_pred) {
