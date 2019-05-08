@@ -12,7 +12,8 @@
 #'   - Remove any columns (and report as warning) which contain more than 50% NA’s.
 #'   
 #' @examples
-#' clean(data)
+#' data(bmarketing)
+#' clean(bmarketing)
 #' @export
 
 clean<-function(data){

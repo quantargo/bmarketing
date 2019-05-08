@@ -3,15 +3,33 @@
 \docType{data}
 \name{bmarketing}
 \alias{bmarketing}
-\title{Prices of 50,000 round cut diamonds.}
-\format{A data frame with 53940 rows and 10 variables:
+\title{Banking Marketing Data}
+\format{A data frame with 4119 rows and 21 variables:
 \describe{
-  \item{price}{price, in US dollars}
-  \item{carat}{weight of the diamond, in carats}
-  ...
+  \item{age}{age, integer}
+  \item{job}{factor}
+  \item{marital}{factor}
+  \item{education}{factor}
+  \item{default}{factor}
+  \item{housing}{factor}
+  \item{load}{factor}
+  \item{contact}{factor}
+  \item{month}{factor}
+  \item{day_of_week}{factor}
+  \item{duration}{integer}
+  \item{campaign}{integer}
+  \item{pdays}{integer}
+  \item{previous}{integer}
+  \item{poutcome}{factor}
+  \item{emp.var.rate}{numeric}
+  \item{cons.price.idx}{numeric}
+  \item{cons.conf.idx}{numeric}
+  \item{euribor3m}{numeric}
+  \item{nr.employed}{numeric}
+  \item{y}{target variable}
 }}
 \source{
-\url{http://www.diamondse.info/}
+marketing
 }
 \usage{
 bmarketing
