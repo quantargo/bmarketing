@@ -7,7 +7,7 @@
 clean(data)
 }
 \arguments{
-\item{data}{A data.frame}
+\item{data}{A data.frame containing a target variable named y}
 }
 \value{
 A cleaned data.frame. 
@@ -19,7 +19,7 @@ This means:
   - Remove any columns (and report as warning) which contain more than 50% NA’s.
 }
 \description{
-\code{sum} returns a clean data set.
+\code{clean} returns a clean data set.
 }
 \examples{
 clean(data)

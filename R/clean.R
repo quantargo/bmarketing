@@ -1,8 +1,8 @@
 #' Cleanin Data
 #'
-#' \code{sum} returns a clean data set.
+#' \code{clean} returns a clean data set.
 #'
-#' @param data A data.frame
+#' @param data A data.frame containing a target variable named y
 #' @return A cleaned data.frame. 
 #'
 #' This means:
@@ -16,7 +16,9 @@
 #' @export
 
 clean<-function(data){
+  
   if(sum(is.na(data$y))>0) stop("Target variable y contains missing values (NA's)")
+  
   for(col in names(data)){
     
     if(sum(is.na(data[,col]))>0){
