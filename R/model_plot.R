@@ -2,12 +2,10 @@
 #'
 #' @param dt_model randomForest, received by \code{link{model_data}}
 #'
-#' @return
 #' @export
 #'
-#' @examples
+#' @importFrom rpart.plot rpart.plot
 model_plot <- function(dt_model) {
   rpart.plot(dt_model)
-
 }
 

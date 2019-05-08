@@ -1,7 +1,7 @@
 context("clean_data")
 
-file1 <- system.file("data/bmarketing.csv", package = "bmarketing", mustWork = TRUE)
-file2 <- system.file("data/bmarketing_with_nas.csv", package = "bmarketing", mustWork = TRUE)
+file1 <- "bmarketing.csv"
+file2 <- "bmarketing_with_nas.csv"
 
 test_that("import and data cleansing works", {
   ## expected no of rows received

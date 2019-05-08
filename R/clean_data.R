@@ -1,15 +1,19 @@
 #' Cleaning function
 #' 
-#' Data is read in from a csv file using \code{\link{readr::read_csv2}}
+#' Data is read in from a csv file using \code{\link{read_csv2}}
 #'
 #' @param filename character, filename
 #' @param target_var character, columnname of dataframe which acts as the target variable 
-#' @param ... args forwarded to \code{\link{readr::read_csv2}}
+#' @param ... args forwarded to \code{\link{read_csv2}}
+#' @param na_threshold numeric, threshold
 #'
 #' @return data.frame, excluding columns with too many NAs
+#' 
+#' @importFrom readr read_csv2
+#' 
 #' @export
 clean_data <- function(filename, target_var, na_threshold = 0.5, ...) {
-  data <- suppressMessages(read_csv2(filename, ...))
+  data <- suppressMessages(readr::read_csv2(filename, ...))
   
   stopifnot(nrow(data) > 0)
   stopifnot(target_var %in% colnames(data))

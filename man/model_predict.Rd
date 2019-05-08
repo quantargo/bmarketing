@@ -4,20 +4,17 @@
 \alias{model_predict}
 \title{Title}
 \usage{
-model_predict(dt_model, data, .)
+model_predict(dt_model, data)
 }
 \arguments{
 \item{dt_model, }{randomForest, received by \code{link{model_data}}}
 
 \item{data}{df data.frame , received by \code{\link{clean_data}}}
-
-\item{.}{}
+}
+\value{
+data df data.frame
 }
 \description{
 The main goal of linear regression is 
 to predict an outcome value on the basis of one or multiple predictor variables.
-}
-\examples{
-
-
 }

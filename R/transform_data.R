@@ -7,8 +7,12 @@
 #' @param cols character vector, columns to be log-transformed
 #'
 #' @return data.frame
+#' 
+#' @importFrom dplyr mutate_if mutate_at
+#' @importFrom readr parse_double
+#' 
 #' @export
 transform_data <- function(df, cols) {
   mutate_if(df, is.factor, readr::parse_double) %>% 
-  mutate_at(df, cols, log)
+  mutate_at(cols, log)
 }

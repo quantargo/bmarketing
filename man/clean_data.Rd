@@ -11,11 +11,13 @@ clean_data(filename, target_var, na_threshold = 0.5, ...)
 
 \item{target_var}{character, columnname of dataframe which acts as the target variable}
 
-\item{...}{args forwarded to \code{\link{readr::read_csv2}}}
+\item{na_threshold}{numeric, threshold}
+
+\item{...}{args forwarded to \code{\link{read_csv2}}}
 }
 \value{
 data.frame, excluding columns with too many NAs
 }
 \description{
-Data is read in from a csv file using \code{\link{readr::read_csv2}}
+Data is read in from a csv file using \code{\link{read_csv2}}
 }

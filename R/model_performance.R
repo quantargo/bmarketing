@@ -1,12 +1,10 @@
 #' Calculate the accuracy of the model
 #'
-#' @param data Dataset that we want to predict on 
+#' @param data character vector, real results
+#' @param prediction character vector, predicted results
 #'
-#' @return
+#' @return numeric, accuracy
 #' @export
-#'
-#' @examples
-model_performance <- function(data) {
-  model_performance <- mean(bmarketing$y == predictions)
-  model_perfomance()
+model_performance <- function(data, prediction) {
+  mean(data == predictions)
 }

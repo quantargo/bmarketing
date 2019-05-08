@@ -1,15 +1,14 @@
 Package: bmarketing
-Title: What the Package Does (One Line, Title Case)
+Title: Decision tree model data process
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
+Authors@R: person("Michael", "Mifek", email = "mifek@rcb.at",
+                  role = c("aut", "cre"))
+Description: Clean, transform data for use in decission tree model
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
+Imports:
+    readr, dplyr, rpart, rpart.plot
 Suggests: 
     testthat
