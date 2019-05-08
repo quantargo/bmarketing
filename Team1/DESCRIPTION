@@ -1,11 +1,10 @@
 Package: Team1
 Type: Package
-Title: Package for manage a data(clean, transform, model-plot, model-predict, model-performance)
+Title: What the package does (short line)
 Version: 0.1.0
 Date: 2019-05-08
 Author: Team 1 project 
 Maintainer: Hanna Popova <popovaas@gmail.com>
 Imports: tidyverse, rpart, rpart.plot
-Description: Package for manage a data, uncluding the Data checking and cleaning, Data transformation,
-Create a model based on data, Plot model, e.g. decision tree, Create model prediction, Calculate the performance of the model
-License: GPL
+Description: package for 
+License: 

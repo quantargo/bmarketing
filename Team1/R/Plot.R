@@ -1,19 +1,6 @@
 
-#'Function to histogram
-#'
-#'
-#'
-#'
-#'@param data Basic object like \code{numeric, char, factor,boolean, NULL}
-#'
-#'@keywords plot
-#'
-#'@import
-#'
-#'@examples
-#'histplot(data) #TRUE
-#'
-#'
+#histogram of plot
+
 
 histplot<-function(data){
   

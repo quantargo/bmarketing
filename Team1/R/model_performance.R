@@ -1,6 +1,8 @@
-model_performance <- function(dataset, target, predictions) {
+
+
+model_performance <- function(target, predictions) {
   ## Compute the accuracy
-  mean(dataset$target == predictions)
+  mean(target == predictions)
   # Lets look at the confusion matrix
-  table(predictions, dataset$target)
+  table(predictions, target)
 }
