@@ -1,7 +1,15 @@
+
 library(tidyverse)
 
 #################Loading data into the environment#################
 bmarketing <- read.csv2("bmarketing.csv")
+
+# correct data types
+bmarketing$emp.var.rate<-as.numeric(bmarketing$emp.var.rate) 
+bmarketing$cons.price.idx<-as.numeric(bmarketing$cons.price.idx)
+bmarketing$cons.conf.idx<-as.numeric(bmarketing$cons.conf.idx)
+bmarketing$euribor3m<-as.numeric(bmarketing$euribor3m)
+bmarketing$nr.employed<-as.numeric(bmarketing$nr.employed)
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
@@ -23,8 +31,6 @@ if(length(which(is.na(bmarketing$y)==TRUE)>0)){
 # Let's find the range of individual variables
 summary(bmarketing)
 
-
- 
 ## ------------------------------------------------------------------------
 bmarketing %>% 
   ggplot() + geom_histogram(aes(age), bins = 30) + 
@@ -40,6 +46,10 @@ library(rpart.plot)
 dt_model<- rpart(y ~ ., data = bmarketing)
 rpart.plot(dt_model)
 summary(dt_model)
+
+ 
+
+
 
 #################Testing Decision Tree #################
 predictions <- predict(dt_model, bmarketing, type = "class")
