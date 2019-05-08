@@ -1,6 +1,15 @@
+#' Predictions.
+#'
+#' \code{predictions} returns predictions.
+#'
+#'
+#' @param model.
+#' @param data.
+#' @examples
+#' predictions(model, data)
+#' @export
 
-#################PPREDICTIONS#################
-predictions <- function(bmarketing, dt_model)
+predictions <- function(dt_model, bmarketing)
 {
   predict(dt_model, bmarketing, type = "class")
 }
