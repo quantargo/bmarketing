@@ -18,5 +18,5 @@ Gives back a classification report containing the Confusion Matrix, Sensitivity,
 Reports model's classification accuracy measures
 }
 \examples{
-calcDTPerformance(y = bmarketing$y, y_pred = predictions)
+calcPerformance(y = bmarketing$y, y_pred = predictions)
 }
