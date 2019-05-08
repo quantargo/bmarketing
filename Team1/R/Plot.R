@@ -1,6 +1,19 @@
 
-#histogram of plot
-
+#'Function to histogram
+#'
+#'
+#'
+#'
+#'@param data Basic object like \code{numeric, char, factor,boolean, NULL}
+#'
+#'@keywords plot
+#'
+#'@import rpart.plot, rpart, tidyverse
+#'
+#'@examples
+#'histplot(data)
+#'
+#'
 
 histplot<-function(data){
   
