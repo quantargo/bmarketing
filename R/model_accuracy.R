@@ -30,7 +30,7 @@ model_accuracy <- function(real,pred){
   result<-list(acc_perc,confusion_matrix)
   names(result) <-c('accuracy','confusion_matrix')
   
-  if(acc_perc<0.9) warning('Accuracy is below 70%.')
+  if(acc_perc<0.7) warning('Accuracy is below 70%.')
   
   return(result)
   
