@@ -11,4 +11,8 @@ Description: decision tree model to predict if customer signing a term deposit
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends:
+  tidyverse, 
+  rpart,
+  rpart.plot
 RoxygenNote: 6.1.1
