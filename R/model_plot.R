@@ -1,6 +1,6 @@
 #' Plot the tree and respective nodes
 #'
-#' @param dt_model decisin tree model
+#' @param dt_model randomForest, received by \code{link{model_data}}
 #'
 #' @return
 #' @export
