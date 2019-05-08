@@ -3,6 +3,12 @@ library(tidyverse)
 #################Loading data into the environment#################
 bmarketing <- read.csv2("bmarketing.csv")
 
+bmarketing$euribor3m = as.numeric(as.character(bmarketing$euribor3m))
+bmarketing$cons.conf.idx = as.numeric(as.character(bmarketing$cons.conf.idx))
+bmarketing$emp.var.rate = as.numeric(as.character(bmarketing$emp.var.rate))
+bmarketing$cons.price.idx = as.numeric(as.character(bmarketing$cons.price.idx))
+bmarketing$nr.employed = as.numeric(as.character(bmarketing$nr.employed))
+
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
 summary(bmarketing)
@@ -36,6 +42,7 @@ library(rpart)
 library(rpart.plot)
 
 dt_model<- rpart(y ~ ., data = bmarketing)
+# dt_model<- rpart(y ~ poutcome + emp.var.rate + cons.price.idx + cons.conf.idx + euribor3m + nr.employed, data = bmarketing)
 rpart.plot(dt_model)
 summary(dt_model)
 
