@@ -13,6 +13,8 @@ bmarketing$nr.employed = as.numeric(as.character(bmarketing$nr.employed))
 str(bmarketing)
 summary(bmarketing)
 
+view (bmarketing)
+
 # A quick check:
 # If newdata has same number of observation that implies no NA value present
 # is.na(bmarketing)
