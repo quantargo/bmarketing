@@ -1,13 +1,13 @@
 Package: bmarketing
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: decision tree model to predict if customer signing a term deposit
+Version: 0.0.1
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Group 2",
+           family = "GoIT DS",
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: decision tree model to predict if customer signing a term deposit
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
