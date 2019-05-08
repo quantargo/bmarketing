@@ -3,9 +3,17 @@ library(tidyverse)
 #################Loading data into the environment#################
 bmarketing <- read.csv2("bmarketing.csv")
 
+as.numeric(as.character(bmarketing$euribor3m))
+as.numeric(as.character(bmarketing$emp.var.rate))
+as.numeric(as.character(bmarketing$cons.price.idx))
+as.numeric(as.character(bmarketing$cons.conf.idx))
+as.numeric(as.character(bmarketing$nr.employed))
+
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
 summary(bmarketing)
+
+view (bmarketing)
 
 # A quick check:
 # If newdata has same number of observation that implies no NA value present
