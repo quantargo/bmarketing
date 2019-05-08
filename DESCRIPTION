@@ -10,3 +10,4 @@ LazyData: true
 Imports: tidyverse, 
          rpart,
          rpart.plot
+RoxygenNote: 6.1.1
