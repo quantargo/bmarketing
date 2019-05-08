@@ -24,7 +24,3 @@ model <- function(input_data,target_name) {
   return (dt_model)
 }
 
-plot_model <- function(model) {
-  library(rpart.plot)
-  rpart.plot(dt_model)
-}
