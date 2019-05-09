@@ -6,7 +6,7 @@
 #' @examples
 #' y_example      = c(0,1,1,0)
 #' y_pred_example = c(1,1,1,0)
-#' results <- calcPerformance(y = y_example, y_pred = y_pred_example)
+#' results <- calcPerfogit pushrmance(y = y_example, y_pred = y_pred_example)
 #' @export
 #' 
 calcPerformance <- function(y, y_pred) {

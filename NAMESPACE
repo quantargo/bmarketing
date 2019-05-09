@@ -3,4 +3,5 @@
 export(calcPerformance)
 export(clean)
 export(fitModel)
+export(predictByModel)
 export(transform)
