@@ -43,3 +43,5 @@ dtreeperf
 translog
 
 trans
+
+standardize
