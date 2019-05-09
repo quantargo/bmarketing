@@ -1,7 +1,7 @@
 #' Log-Tranforms input data for easy model development\cr
 #' 
 #' If data is numeric and negative \cr
-#' AND if data appears as non-normal with the shapiro test\cr
+#' AND if data appears as non-normal \cr
 #' the function performs a log transformation\cr
 #' 
 #' @param input dataframe
@@ -17,8 +17,7 @@
 transform <- function(input) {
   output <- as.data.frame(lapply(input, function(x) {
     if(is.numeric(x) && min(x)>0) {
-      xshapiro <- shapiro.test(x)
-      if(xshapiro$p.value <.05) { 
+      if(ad.test(x)$p.value <.05) { 
         x<-log(x)
       }}
     x  

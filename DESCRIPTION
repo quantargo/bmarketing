@@ -9,6 +9,7 @@ LazyData: true
 Imports: tidyverse, 
          rpart,
          rpart.plot,
-         dplyr
+         dplyr,
+         nortest
 RoxygenNote: 6.1.1
 
