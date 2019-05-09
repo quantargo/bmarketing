@@ -5,6 +5,7 @@
 #'
 #'
 #'@param data Basic object like \code{numeric, char, factor,boolean, NULL}
+#'@param column Basic object like \code{numeric}
 #'
 #'@keywords plot
 #'
@@ -13,15 +14,16 @@
 #'@import tidyverse
 #'
 #'@examples
-#'histplot(data)
+#'histplot(data, column)
 #'
 #'
 
-histplot<-function(data){
+
+histplot<-function(data, column){
   
   data %>% 
-    ggplot() + geom_histogram(aes(age), bins = 30) + 
-    geom_vline(aes(xintercept= median(age)), color = "red")
+    ggplot() + geom_histogram(aes(column), bins = 30) + 
+    geom_vline(aes(xintercept= median(column)), color = "red")
 }
 
 #trreplot
