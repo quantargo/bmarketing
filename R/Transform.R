@@ -29,7 +29,7 @@ x<-log(x)
 
 #################Transform factors into numeric variables (and vice versa) as necessary#################
 
-intonum<-factor(f) {
+intonum<-function(f) {
   
 f <- as.numeric(as.character(f))
 
