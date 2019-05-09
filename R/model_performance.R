@@ -6,5 +6,10 @@
 #' @return numeric, accuracy
 #' @export
 model_performance <- function(data, prediction) {
-  mean(data == predictions)
+  cm <- table(data, prediction) 
+  list(
+    accuracy = diag(cm) / sum(cm),
+    sensitivity = cm[1,1] / sum(cm[, 1]),
+    specificity = cm[2,2] / sum(cm[, 2])
+  )
 }
