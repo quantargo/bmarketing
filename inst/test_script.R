@@ -14,5 +14,8 @@ m <- model_data(df, target_var)
 
 model_plot(m)
 
-target <- df[, target_var]
+target <- df[, target_var][[1]]
 predictions <- model_predict(m, df)
+
+
+model_performance(target, predictions)
