@@ -10,6 +10,7 @@
 #' 
 #' @importFrom dplyr mutate_if mutate_at
 #' @importFrom readr parse_double
+#' @importFrom magrittr
 #' 
 #' @export
 transform_data <- function(df, cols) {
