@@ -11,49 +11,59 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+library(bmarketing)
+library(rpart)
+library(rpart.plot)
 ```
 # bmarketing
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of bmarketing is to provide bunch of shortcut functions for processing data, cleansing, evaluation decision tree models. 
+The goal of bmarketing is to provide functions useful for data cleansing, modelling and reporting tasks.
 
 ## Installation
 
-You can install the released version of bmarketing from Githu.com\... with:
+You can install the released version of bmarketing from [Github](https://github.com/BalintKomjati/bmarketing) with: 
 
-``` r
-install.packages("bmarketing")
-```
-
-And the development version from [GitHub](https://github.com/) with:
-
-``` r
-# install.packages("devtools")
+```{r}
 devtools::install_github("BalintKomjati/bmarketing")
+library(bmarketing)
 ```
+
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic workflow for package usage is the following:
 
-```{r example}
+1) Import the package
+
+```{r}
 library(bmarketing)
-## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+2) Import the data you want to analyse. Like
 
-```{r cars}
-summary(cars)
+```{r}
+bmarketing <- read.csv2("inst/bmarketing.csv",dec = ".")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+3) Do some data cleansing with function clean()
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
+```{r}
+bmarketing <- clean(x = bmarketing, t = "y")
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+4) Fit a Decision Tree, plot the results, give predictions:
+
+```{r}
+dt_model<- rpart(y ~ ., data = bmarketing)
+rpart.plot(dt_model)
+
+predictions <- predict(dt_model, bmarketing, type = "class")
+```
+
+5) Finally, you can create a report for model performance:
+```{r}
+calcPerformance(y = bmarketing$y, y_pred = predictions)
+```
+
