@@ -1,9 +1,9 @@
 #' Reports model's classification accuracy measures 
 #'
-#' @param \code{data} data.frame used for model fitting
-#' @param \code{y} name of the target variable (quoted character)
-#' @param \code{modelType} string, name of the requested model type: either 'Logistic' or 'DecisionTree'
-#' @param \code{explVars} either NULL or character vector containing list of explanatory variables 
+#' @param data data.frame used for model fitting
+#' @param y name of the target variable (quoted character)
+#' @param modelType string, name of the requested model type: either 'Logistic' or 'DecisionTree'
+#' @param explVars either NULL or character vector containing list of explanatory variables 
 #' @return Return the objectum of the model
 #' @examples
 #' df <- data.frame(y = c(0,1,1,0), a = c('a', 'b', 'c', 'a'), b = c(12,121,11,12))

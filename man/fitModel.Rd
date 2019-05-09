@@ -7,13 +7,13 @@
 fitModel(data, y, modelType, explVars = NULL)
 }
 \arguments{
-\item{\code{data}}{data.frame used for model fitting}
+\item{data}{data.frame used for model fitting}
 
-\item{\code{y}}{name of the target variable (quoted character)}
+\item{y}{name of the target variable (quoted character)}
 
-\item{\code{modelType}}{string, name of the requested model type: either 'Logistic' or 'DecisionTree'}
+\item{modelType}{string, name of the requested model type: either 'Logistic' or 'DecisionTree'}
 
-\item{\code{explVars}}{either NULL or character vector containing list of explanatory variables}
+\item{explVars}{either NULL or character vector containing list of explanatory variables}
 }
 \value{
 Return the objectum of the model
