@@ -1,4 +1,4 @@
-#'Function to clean data
+#'Function to find missing data
 #'
 #'
 #'
@@ -8,7 +8,6 @@
 #'
 #'@keywords na.omit , nrow, length
 #'
-#'@import rpart
 #'
 #'@export clear1
 #'@export clear2
@@ -38,7 +37,23 @@ clear1 <- function(data) {
   }
 }
 
-
+#'Function to find missing data inside a column
+#'
+#'
+#'
+#'
+#'@param data Basic object like \code{numeric,int,boolean,char}
+#'@param target Basic object like \code{numeric,int,boolean,char}
+#'
+#'@keywords na.omit , nrow, length
+#'
+#'
+#'@export clear2
+#'
+#'@examples
+#'clear2(bmarketing$duration)
+#
+#'
 
 #A deep check for a particular column let say age
 
@@ -51,6 +66,23 @@ clear2 <- function(data,target) {
   }
 }
 
+#'Remove any columns (and report as warning) which contain more than 50% NA’s
+#'
+#'
+#'
+#'
+#'@param data Basic object like \code{numeric,int,boolean,char}
+#'@param target Basic object like \code{numeric,int,boolean,char}
+#'
+#'@keywords na.omit, nrow, length
+#'
+#'
+#'@export clear3
+#'
+#'@examples
+#'clear3(bmarketing$duration)
+#
+#'
  
 #Remove any columns (and report as warning) which contain more than 50% NA’s
 clear3 <- function(data,target) {
