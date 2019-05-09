@@ -28,8 +28,7 @@ transform_data <- function(df, cols_impute, cols_log, cols_normalize) {
 }
 
 impute_transform <- function(x) {
-  x
-  ## like this: x[is.na(x)] <- mean(x, na.rm = TRUE)
+  replace(x, is.na(x), mean(x, na.rm = TRUE))
 }
 
 normalize_transform <- function(x) {
