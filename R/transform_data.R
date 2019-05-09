@@ -16,7 +16,7 @@
 #' @importFrom readr parse_double
 #' 
 #' @export
-transform_data <- function(df, cols_impute, cols_log, cols_normalize) {
+transform_data <- function(df, cols_impute = NULL, cols_log = NULL, cols_normalize = NULL) {
   
   res_df <- mutate_if(df, is.factor, readr::parse_double)
   

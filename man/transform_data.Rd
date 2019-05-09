@@ -4,7 +4,8 @@
 \alias{transform_data}
 \title{Tranform data}
 \usage{
-transform_data(df, cols_impute, cols_log, cols_normalize)
+transform_data(df, cols_impute = NULL, cols_log = NULL,
+  cols_normalize = NULL)
 }
 \arguments{
 \item{df}{data.frame, recveived by \code{\link{clean_data}}}
