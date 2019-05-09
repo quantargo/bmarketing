@@ -4,20 +4,44 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-"
+  fig.path = "man/figures/README-",
+  out.width = "100%"
 )
 ```
+# bmarketing
 
-[![Travis Build Status](https://travis-ci.org/Quantargo/bmarketing.svg?branch=master)](https://travis-ci.org/Quantargo/bmarketing)
-[![Coverage Status](https://img.shields.io/codecov/c/github/Quantargo/bmarketing/master.svg)](https://codecov.io/github/Quantargo/bmarketing?branch=master)
+<!-- badges: start -->
+<!-- badges: end -->
 
-## Overview
+The goal of bmarketing package is to create decision tree model and use it to generate predictions based on provided dataset. It is also able to clean the dataset before creating model or making predictions.
 
-The bmarketing dataset
+## Installation
 
-<!-- TODO: Change README to make it more descriptive, add examples, etc. -->
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("nandakallugjeri/bmarketing")
+```
+## Functions
+
+Funcion documentation is accessible through ?functionname. For example, run 
+?checkNA to see the documentation for checkNA function.
+\item checkNA
+\item cleanData
+\item dtree
+\item dtreeplot
+\item dtreesummary
+\item dtreepredict
+\item dtreeperf
+\item translog
+\item trans
+\item standardize
+\item logit
+
 

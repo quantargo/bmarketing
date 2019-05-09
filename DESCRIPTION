@@ -1,0 +1,19 @@
+Package: bmarketing
+Title: package for some marketing data analysis
+Version: 0.0.1
+Authors@R: 
+    person(given = "Group 2",
+           family = "GoIT DS",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: decision tree model to predict if customer signing a term deposit
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends:
+  tidyverse, 
+  rpart.plot
+Imports:
+  rpart
+RoxygenNote: 6.1.1
