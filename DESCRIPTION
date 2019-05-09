@@ -3,9 +3,9 @@ Title: Package aimed to preprocess and build strong decision tree based predicti
 Version: 0.0.0.9000
 Authors@R: person("Group 3", "Data Scinece Academy", email = "first.last@example.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
-Depends: R (>= 3.5.2)
+Depends: R (>= 3.5.0)
 Imports: tidyverse, rpart, rpart.plot
-License: What license is it under?
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
