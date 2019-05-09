@@ -17,7 +17,38 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-The bmarketing dataset
+This package is dedicated to classification analysis using decision trees. Aside from decision tree model itself and prediction function it has got all necessary supporting tools - data cleaning, transformation function, plot of the results and calculation of accuracy of predictions and confusion matrix.
 
-<!-- TODO: Change README to make it more descriptive, add examples, etc. -->
+## Functionalities
 
+The functionalities are as follows.
+
+* Data Cleaning
+
+```{r}
+require("tree3")
+
+data("bmarketing")
+cleanedData <- clean(data = bmarketing,target_name = "y")
+```
+
+* Data Transforming
+```{r}
+cleanedData$cons.price.id <- transform(cleanedData,column = "cons.price.idx")
+```
+
+* Finding a Model
+```{r}
+treeModel <-  model(input_data = cleanedData,target_name="y")
+```
+
+
+* Getting the predictions
+```{r}
+predictionData <-  predictions(dt_model = treeModel,data = cleanedData)
+```
+
+* Assessing the model accuracy
+```{r}
+model_accuracy(real = cleanedData$y,pred = predictionData,chosenvar='yes')
+```

@@ -8,7 +8,79 @@ Status](https://img.shields.io/codecov/c/github/Quantargo/bmarketing/master.svg)
 
 ## Overview
 
-The bmarketing
-dataset
+This package is dedicated to classification analysis using decision
+trees. Aside from decision tree model itself and prediction function it
+has got all necessary supporting tools - data cleaning, transformation
+function, plot of the results and calculation of accuracy of predictions
+and confusion matrix.
 
-<!-- TODO: Change README to make it more descriptive, add examples, etc. -->
+## Functionalities
+
+The functionalities are as follows.
+
+  - Data Cleaning
+
+<!-- end list -->
+
+``` r
+require("tree3")
+#> Loading required package: tree3
+#> 
+#> Attaching package: 'tree3'
+#> The following object is masked from 'package:base':
+#> 
+#>     transform
+
+data("bmarketing")
+cleanedData <- clean(data = bmarketing,target_name = "y")
+```
+
+  - Data
+Transforming
+
+<!-- end list -->
+
+``` r
+cleanedData$cons.price.id <- transform(cleanedData,column = "cons.price.idx")
+```
+
+  - Finding a Model
+
+<!-- end list -->
+
+``` r
+treeModel <-  model(input_data = cleanedData,target_name="y")
+```
+
+![](man/figures/README-unnamed-chunk-4-1.png)<!-- -->
+
+  - Getting the predictions
+
+<!-- end list -->
+
+``` r
+predictionData <-  predictions(dt_model = treeModel,data = cleanedData)
+```
+
+  - Assessing the model
+accuracy
+
+<!-- end list -->
+
+``` r
+model_accuracy(real = cleanedData$y,pred = predictionData,chosenvar='yes')
+#> $accuracy
+#> [1] 0.9271668
+#> 
+#> $confusion_matrix
+#>      pred
+#> real    no  yes
+#>   no  3583   85
+#>   yes  215  236
+#> 
+#> $sensitivity
+#> [1] 0.5232816
+#> 
+#> $specificity
+#> [1] 0.9768266
+```
