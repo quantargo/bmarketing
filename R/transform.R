@@ -18,11 +18,13 @@ translog<-function(x){
 #'
 #' A class transformation, wich converts numeric to factor and factor to numeric
 #'
-#' @param var A numeric or factor data
+#' @param x A numeric or factor data
 #' 
 #' @export
-trans <- function(var){
-    if (is.numeric(var)) v <- as.factor(var)
-    if (is.factor(var)) v <- as.numeric(as.character(var))
-    var<-v
+trans <- function(x){
+    if (is.numeric(x)){
+        x <- as.factor(x)
+    } else if (is.factor(x)) {
+        x <- as.numeric(as.character(x))
+    }
 }
