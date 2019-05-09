@@ -4,7 +4,7 @@
 \alias{predictions}
 \title{Predictions.}
 \usage{
-predictions(dt_model, bmarketing)
+predictions(dt_model, data)
 }
 \arguments{
 \item{dt_model}{model}

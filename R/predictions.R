@@ -10,7 +10,7 @@
 #' predictions(dt_model, bmarketing)
 #' @export
 
-predictions <- function(dt_model, bmarketing)
+predictions <- function(dt_model, data)
 {
-  predict(dt_model, bmarketing, type = "class")
+  predict(dt_model, data, type = "class")
 }

@@ -45,7 +45,7 @@ treeModel <-  model(input_data = cleanedData,target_name="y")
 
 * Getting the predictions
 ```{r}
-predictionData <-  predictions(dt_model = treeModel,bmarketing = cleanedData)
+predictionData <-  predictions(dt_model = treeModel,data = cleanedData)
 ```
 
 * Assessing the model accuracy
