@@ -4,7 +4,7 @@
 #'
 #' @param x A numeric vector
 #' 
-#' #' @examples
+#' @examples
 #' transform_log(exp(rnorm(7)))
 #' 
 #' @export
