@@ -3,4 +3,8 @@
 export(clean)
 export(model)
 export(model_accuracy)
+<<<<<<< HEAD
+=======
+export(plot_model)
+>>>>>>> 49a790ef5a117d5c02b5e2967abd8ff9370d1817
 export(predictions)
