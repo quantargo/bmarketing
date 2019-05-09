@@ -50,7 +50,6 @@ cleanedData$cons.price.id <- transform(cleanedData,column = "cons.price.idx")
 
 ``` r
 treeModel <-  model(input_data = cleanedData,target_name="y")
-#> Warning: package 'rpart.plot' was built under R version 3.5.3
 ```
 
 ![](man/figures/README-unnamed-chunk-4-1.png)<!-- -->
@@ -63,12 +62,13 @@ treeModel <-  model(input_data = cleanedData,target_name="y")
 predictionData <-  predictions(dt_model = treeModel,data = cleanedData)
 ```
 
-  - Assessing the model accuracy
+  - Assessing the model
+accuracy
 
 <!-- end list -->
 
 ``` r
-model_accuracy(real = cleanedData$y,pred = predictionData)
+model_accuracy(real = cleanedData$y,pred = predictionData,chosenvar='yes')
 #> $accuracy
 #> [1] 0.9271668
 #> 
@@ -77,4 +77,10 @@ model_accuracy(real = cleanedData$y,pred = predictionData)
 #> real    no  yes
 #>   no  3583   85
 #>   yes  215  236
+#> 
+#> $sensitivity
+#> [1] 0.5232816
+#> 
+#> $specificity
+#> [1] 0.9768266
 ```

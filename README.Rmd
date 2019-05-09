@@ -50,5 +50,5 @@ predictionData <-  predictions(dt_model = treeModel,data = cleanedData)
 
 * Assessing the model accuracy
 ```{r}
-model_accuracy(real = cleanedData$y,pred = predictionData, chosenvar='yes')
+model_accuracy(real = cleanedData$y,pred = predictionData,chosenvar='yes')
 ```
