@@ -16,7 +16,7 @@ You can install the released version of bmarketing from
 [Github](https://github.com/BalintKomjati/bmarketing)
     with:
 
-    #> Skipping install of 'bmarketing' from a github remote, the SHA1 (b1a80ee1) has not changed since last install.
+    #> Skipping install of 'bmarketing' from a github remote, the SHA1 (fe3f738e) has not changed since last install.
     #>   Use `force = TRUE` to force installation
 
 ## Example
@@ -65,7 +65,7 @@ rpart.plot(dt_model)
 
 ``` r
 
-predictions <- predict(dt_model, bmarketing, type = "class")
+predictions <- predictByModel(data = bmarketing, model2Predict = dt_model, modelType = "DecisionTree")
 ```
 
 5)  Finally, you can create a report for model performance:

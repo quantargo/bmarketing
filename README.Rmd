@@ -59,7 +59,7 @@ bmarketing <- clean(x = bmarketing, t = "y")
 dt_model <- fitModel(data = bmarketing, y = 'y', modelType = 'DecisionTree')
 rpart.plot(dt_model)
 
-predictions <- predict(dt_model, bmarketing, type = "class")
+predictions <- predictByModel(data = bmarketing, model2Predict = dt_model, modelType = "DecisionTree")
 ```
 
 5) Finally, you can create a report for model performance:
