@@ -10,6 +10,8 @@
 #' @return 
 #' Return the cleaned dataframe and prints warning messages in case there are any.
 #' 
+#' @importFrom stats sd predict na.omit
+#' 
 #' @export
 cleanData <- function( ds, targetVar, replaceNAs=FALSE ){
   
