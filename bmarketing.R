@@ -13,6 +13,9 @@ bmarketing$nr.employed = as.numeric(as.character(bmarketing$nr.employed))
 str(bmarketing)
 summary(bmarketing)
 
+
+bmarketing$y<-NULL
+
 view (bmarketing)
 
 # A quick check:

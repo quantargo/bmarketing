@@ -9,16 +9,18 @@ logaritmic(x)
 \arguments{
 \item{x}{Basic object like \code{numeric}}
 
-\item{f}{Basic object like \code{factor}}
+\item{data}{Basic object like \code{numeric, boolean, character, NULL, factor}}
+
+\item{column}{Basic object like \code{factor}}
 }
 \description{
 Function to make neccessary transformation of data
 }
 \examples{
-logaritmic(bmarketing$age)
-logaritmic(bmarketing$duration)
-intonum(bmarketing$poutcome)
-intonum(bmarketing$euribor3m)
+bmarketing$age<-logaritmic(bmarketing$age)
+bmarketing$duration<-logaritmic(bmarketing$duration)
+bmarketing$poutcome<-intonum(bmarketing$poutcome)
+bmarketing$euribor3m<-intonum(bmarketing, bmarketing$euribor3m)
 
 }
 \keyword{,}

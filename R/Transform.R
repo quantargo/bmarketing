@@ -4,7 +4,8 @@
 #'
 #'
 #'@param x Basic object like \code{numeric}
-#'@param f Basic object like \code{factor}
+#'@param data Basic object like \code{numeric, boolean, character, NULL, factor}
+#'@param column Basic object like \code{factor}
 #'
 #'@keywords log , number2factor
 #'
@@ -16,10 +17,10 @@
 #'@export intonum
 #'
 #'@examples
-#'logaritmic(bmarketing$age)
-#'logaritmic(bmarketing$duration)
-#'intonum(bmarketing$poutcome)
-#'intonum(bmarketing$euribor3m)
+#'bmarketing$age<-logaritmic(bmarketing$age)
+#'bmarketing$duration<-logaritmic(bmarketing$duration)
+#'bmarketing$poutcome<-intonum(bmarketing$poutcome)
+#'bmarketing$euribor3m<-intonum(bmarketing, bmarketing$euribor3m)
 #'
 
 
@@ -34,8 +35,9 @@ x<-log(x)
 
 #################Transform factors into numeric variables (and vice versa) as necessary#################
 
-intonum<-function(f) {
+intonum<-function(data, column) {
   
-f <- as.numeric(as.character(f))
+data$column <- as.numeric(as.character(column))
+
 
 }

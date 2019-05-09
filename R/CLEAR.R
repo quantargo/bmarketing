@@ -54,11 +54,14 @@ clear2 <- function(data,target) {
  
 #Remove any columns (and report as warning) which contain more than 50% NA’s
 clear3 <- function(data,target) {
-if(length(which(is.na(data$target)==TRUE)>length(data$target)/2)){
+if(length(which(is.na(target)==TRUE)>length(target)/2)){
   print("There are more than 50% of Missing Value in the specified column")
-  data$target <- NULL
+  #assign(target, NULL, envir = .GlobalEnv)
+  
 } else{
   print("All okay: There are no more than 50% of Missing Value in the specified column")
 }
 }
+
+
 
