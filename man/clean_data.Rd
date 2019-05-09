@@ -19,7 +19,7 @@ clean_data(df, target_var, na_threshold = 0.5, ...)
 data.frame, excluding columns with too many NAs
 }
 \description{
-Data is read in from a csv file using \code{\link{read_csv2}}
+Data is cleand
 }
 \examples{
 \dontrun{

@@ -4,17 +4,23 @@
 \alias{transform_data}
 \title{Tranform data}
 \usage{
-transform_data(df, cols)
+transform_data(df, cols_impute, cols_log, cols_normalize)
 }
 \arguments{
 \item{df}{data.frame, recveived by \code{\link{clean_data}}}
 
-\item{cols}{character vector, columns to be log-transformed}
+\item{cols_impute}{character}
+
+\item{cols_log}{character}
+
+\item{cols_normalize}{character}
 }
 \value{
 data.frame
 }
 \description{
 1. Changes factor columns to numeric, if possible
-2. Apply log to user defined columns
+2. Apply mean-impute to user defined columns
+3. Apply log to user defined columns
+4. Apply normalization to user defined columns
 }

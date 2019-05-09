@@ -4,7 +4,10 @@
 #'
 #' @export
 #'
-#' @example You can plot it by invoke function model_plot(dt_model)
+#' @examples
+#' \dontrun{
+#' model_plot(dt_model)
+#' }
 #' @importFrom rpart.plot rpart.plot
 model_plot <- function(dt_model) {
   rpart.plot(dt_model)

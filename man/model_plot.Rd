@@ -12,3 +12,8 @@ model_plot(dt_model)
 \description{
 Plot the tree and respective nodes
 }
+\examples{
+\dontrun{
+model_plot(dt_model)
+}
+}

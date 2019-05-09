@@ -18,3 +18,8 @@ data df data.frame
 The main goal of linear regression is 
 to predict an outcome value on the basis of one or multiple predictor variables.
 }
+\examples{
+\dontrun{
+model_predict(dt_model,dataframe)
+}
+}
