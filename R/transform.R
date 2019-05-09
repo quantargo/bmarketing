@@ -14,7 +14,6 @@
 #' @export
 
 transform <- function(data, column, option = 1) {
-  library(DescTools)
   
   if(is.integer(data[,column]) || is.numeric(data[,column])) {
   # Taking care of missing data & log
