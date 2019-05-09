@@ -1,7 +1,7 @@
 library(tidyverse)
 
 #################Loading data into the environment#################
-bmarketing <- read.csv2("bmarketing.csv")
+bmarketing <- read.csv2("inst/bmarketing.csv",dec = ".")
 
 #Lets look at dataset and generate initial understanding about the column types
 str(bmarketing)
@@ -34,6 +34,14 @@ bmarketing %>%
 #################Decision Tree#################
 library(rpart)
 library(rpart.plot)
+
+##fixed
+bmarketing$euribor3m <- as.numeric(as.character(bmarketing$euribor3m))
+bmarketing$emp.var.rate <- as.numeric(as.character(bmarketing$emp.var.rate))
+bmarketing$cons.price.idx <- as.numeric(as.character(bmarketing$cons.price.idx))
+bmarketing$cons.conf.idx <- as.numeric(as.character(bmarketing$cons.conf.idx))
+bmarketing$nr.employed <- as.numeric(as.character(bmarketing$nr.employed))
+##
 
 dt_model<- rpart(y ~ ., data = bmarketing)
 rpart.plot(dt_model)
