@@ -7,6 +7,7 @@
 #' @param data df data.frame , received by \code{\link{clean_data}} 
 #'
 #' @return data df data.frame
+#' @export
 model_predict <- function(dt_model, data) {
   predict(dt_model, data, type = "class")
 }
