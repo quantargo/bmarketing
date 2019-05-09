@@ -10,10 +10,8 @@
 #' 
 #' @importFrom dplyr mutate_if mutate_at
 #' @importFrom readr parse_double
-#' @importFrom magrittr
 #' 
 #' @export
 transform_data <- function(df, cols) {
-  mutate_if(df, is.factor, readr::parse_double) %>% 
-  mutate_at(cols, log)
+  mutate_at(mutate_if(df, is.factor, readr::parse_double), cols, log)
 }

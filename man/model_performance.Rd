@@ -12,7 +12,7 @@ model_performance(data, prediction)
 \item{prediction}{character vector, predicted results}
 }
 \value{
-list, accuracy measures out of confusion matrix
+list, accuracy measures out of confusion matrix:
 }
 \description{
 Calculate the accuracy of the model
