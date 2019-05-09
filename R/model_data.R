@@ -14,5 +14,5 @@
 #' model_data(df, target_var="Y")
 #' }
 model_data <- function(df, target_var){
-  rpart(as.formula(paste(target_var, "~ .")), data = dataset, model = TRUE)
+  rpart(as.formula(paste(target_var, "~ .")), data = df, model = TRUE)
 }
