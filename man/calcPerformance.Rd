@@ -9,7 +9,7 @@ calcPerformance(y, y_pred)
 \arguments{
 \item{\code{y}}{Target variable (class or numeric)}
 
-\item{\code{y}}{Target variable (class or numeric)}
+\item{\code{y_pred}}{Target variable (class or numeric)}
 }
 \value{
 Gives back a classification report containing the Confusion Matrix, Sensitivity, Specificity, Precision and Accuracy
