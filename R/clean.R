@@ -3,6 +3,7 @@
 #' \code{clean} returns a clean data set.
 #'
 #' @param data A data.frame containing a target variable named y
+#' @param target_name A character containing the name of the target variable
 #' @return A cleaned data.frame. 
 #'
 #' This means:
