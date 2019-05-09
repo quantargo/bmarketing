@@ -8,18 +8,20 @@
 #' 
 #' @return 
 #' Return the cleaned dataframe and prints warning messages in case there are any.
+#' 
+#' @export
 
 
 cleanData <- function( ds, targetVar )
 {
   
   #Firstly checking if the target Variable parameter actually exists inside the dataframe.
-  if (targetVar %in%   colnames(ds) == FALSE ) 
-    stop(targetVar || "variable not part of the dataframe passed")
+  if (any( colnames(ds)  ==  targetVar ) == FALSE)
+    stop( paste(targetVar, "variable not part of the dataframe passed"))
   
   #Secondly checking if target variable contains any NA's values.
-  if(length(which(is.na(ds$targetVar)==TRUE))>0){
-    print("Missing Value found in the specified column")
+  if(length(which(is.na(ds$targetVar)==TRUE)>0)){
+    stop("Missing Value found in the target column")
   } else{
     print("Target Variable looks clean. No NA values")
   }
