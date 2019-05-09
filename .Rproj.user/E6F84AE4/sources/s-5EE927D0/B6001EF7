@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557311882456.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B6001EF7",
+    "lastKnownWriteTime" : 1557319656,
+    "last_content_update" : 1557319656,
+    "path" : "~/bmarketinggggg/bmarketing.R",
+    "project_path" : "bmarketing.R",
+    "properties" : {
+        "cursorPosition" : "51,0",
+        "scrollLine" : "28"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,14 @@
+Package: Team1
+Type: Package
+Title: Data manage package
+Version: 0.1.0
+Date: 2019-05-08
+Author: Team 1 project 
+Maintainer: Hanna Popova <popovaas@gmail.com>
+Imports: 
+  tidyverse,    
+  rpart,
+  rpart.plot
+Description: The package Team1 used for data cleaning, data transforming, model, model plotting, model predicting and model performance.
+License: open source
+RoxygenNote: 6.1.1
