@@ -4,23 +4,32 @@
 \alias{model_accuracy}
 \title{model_accuracy}
 \usage{
-model_accuracy(real, pred)
+model_accuracy(real, pred, chosenvar)
 }
 \arguments{
 \item{real}{a vector of realized observations}
 
 \item{pred}{a vector of corresponding predictions}
+
+\item{chosenvar}{a string/numeric which choose for which class sensitivity will be calculated}
 }
 \value{
 \code{accuracy} ... a number
 
 \code{confusion_matrix} ... a matrix
+
+\code{sensitivity} ... a number
+
+\code{specificity} ... a number
 }
 \description{
-The function calculates accuracy (as a share of correctly classified observations and total observations) and confusion matrix of a classification model. For further reference to confusion matrix please see \url{https://en.wikipedia.org/wiki/Confusion_matrix}.
+The function calculates accuracy (as a share of correctly classified observations and total observations), confusion matrix of a classification model
+, sensitivity and specificity. For further reference to confusion matrix, sensitivity and specificity please see \url{https://en.wikipedia.org/wiki/Confusion_matrix}
+, respective \url{https://en.wikipedia.org/wiki/Sensitivity_and_specificity}.
 }
 \examples{
 example_real=c(1,2,3,1,2,3,1,2,3) # a vector of realized observations
 example_pred=c(1,2,3,1,2,3,2,2,2) # a vector of predictions
-model_accuracy(example_real,example_pred)
+example_chosenvar=2
+model_accuracy(example_real,example_pred,example_chosenvar)
 }
