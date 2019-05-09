@@ -8,6 +8,9 @@
 #'
 #'@keywords log , number2factor
 #'
+#'@import rpart.plot 
+#'@import rpart 
+#'@import tidyverse
 #'
 #'@examples
 #'logaritmic(bmarketing$age)

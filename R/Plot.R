@@ -8,7 +8,9 @@
 #'
 #'@keywords plot
 #'
-#'@import rpart.plot rpart tidyverse
+#'@import rpart.plot 
+#'@import rpart 
+#'@import tidyverse
 #'
 #'@examples
 #'histplot(data)

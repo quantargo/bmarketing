@@ -9,7 +9,8 @@
 #'
 #'@keywords model, decision tree, accuracy
 #'
-#'@import rpart tidyverse
+#'@import rpart 
+#'@import tidyverse
 #'
 #'@examples
 #'model_performance(target, predictions)

@@ -9,7 +9,9 @@
 #'
 #'@keywords model, decision tree,
 #'
-#'@import rpart.plot rpart tidyverse
+#'@import rpart.plot 
+#'@import rpart 
+#'@import tidyverse
 #'
 #'@examples
 #'model(bmarketing, bmarketing$y)
