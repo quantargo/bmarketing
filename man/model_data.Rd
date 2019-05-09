@@ -17,3 +17,8 @@ return decision tree
 \description{
 Returns the predicted classes from the decision tree
 }
+\examples{
+
+data("bmarketing")
+model_data <- model(dataset = bmarketing, target_var="y")
+}

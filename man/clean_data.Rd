@@ -21,3 +21,9 @@ data.frame, excluding columns with too many NAs
 \description{
 Data is read in from a csv file using \code{\link{read_csv2}}
 }
+\examples{
+\dontrun{
+data <- import_data("/data/bmarketing2.csv")
+clean_data(data, target_var = "Y")
+}
+}

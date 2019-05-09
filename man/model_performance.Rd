@@ -18,8 +18,8 @@ list, measures out of confusion matrix: accuracy, sensitivity, specificity. \url
 Calculate the accuracy of the model
 }
 \examples{
-target <- sample(c(0, 1), 100)
-prediction <- sample(c(0, 1), 100)
+target <- sample(c(0, 1), 100, replace = TRUE)
+prediction <- sample(c(0, 1), 100, replace = TRUE)
 model_performance(target, prediction)
 
 }

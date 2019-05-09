@@ -1,19 +1,18 @@
 #' Returns the predicted classes from the decision tree
 #'
-#' @param dataset Data frame on which we want to make a model
-#' @param target_var Dependent variable 
+#' @param df data.frame on which we want to make a model
+#' @param target_var character, Dependent variable 
 #'
-#' @return return decision tree
+#' @return return decision tree model
 #' 
 #' @importFrom rpart rpart
 #' 
 #' @export
 #'
 #' @examples
-#' 
-#' data("bmarketing")
-#' model_data <- model(dataset = bmarketing, target_var="y")
-
-model_data <- function(dataset, target_var){
+#' \dontrun{
+#' model_data(df, target_var="Y")
+#' }
+model_data <- function(df, target_var){
   rpart(as.formula(paste(target_var, "~ .")), data = dataset, model = TRUE)
 }
