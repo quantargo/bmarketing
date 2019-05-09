@@ -8,6 +8,8 @@ clean(data, target_name)
 }
 \arguments{
 \item{data}{A data.frame containing a target variable named y}
+
+\item{target_name}{A character containing the name of the target variable}
 }
 \value{
 A cleaned data.frame. 
