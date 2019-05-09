@@ -2,14 +2,17 @@
 % Please edit documentation in R/transform.R
 \name{transform}
 \alias{transform}
-\title{Log transformation and factor transformation into numeric variables (and vice versa) as necessary.}
+\title{Log transformation and factor transformation into numeric variables (and vice versa) as necessary.
+The function needs DescTools library installed}
 \usage{
-transform(data, column)
+transform(data, column, option = 1)
 }
 \arguments{
 \item{data}{A data.frame containing the target variable}
 
 \item{column}{The column, with double quotation marks which needs to be transformed}
+
+\item{option}{The option to replace NA's by the mean or by modus (1 - replace NA's - default, 0 - no replacement)}
 }
 \value{
 The column from the data frame that is returned is the transformed data
@@ -18,5 +21,5 @@ The column from the data frame that is returned is the transformed data
 \code{transform} transforms the sent data to log (for numeric) or factor transformation into numeric, as necessary.
 }
 \examples{
-transform(bmarketing, "age")
+transform(bmarketing, "age", 1)
 }
