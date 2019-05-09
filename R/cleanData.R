@@ -1,10 +1,11 @@
 #' Checking the quality of data.
 #' 
-#' NA values checked.
+#' Check if Target variable for the model has NA values. 
+#' It also checks all the variables for NAs and removes the column if more then half of the values are NAs.
 #' 
 #' @param ds dataframe object
 #' @param targetVar name of the target variable of the dataframe \code ds
-#' 
+#' @param replaceNAs True or False, if you want to replace NAs with mean value.
 #' 
 #' @return 
 #' Return the cleaned dataframe and prints warning messages in case there are any.
