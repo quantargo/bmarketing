@@ -12,7 +12,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
-  tidyverse, 
   rpart.plot
 Imports:
   rpart

@@ -9,7 +9,7 @@ logit(udata, target)
 \arguments{
 \item{udata}{Input data for the model.}
 
-\item{target}{target variable from the input data.}
+\item{target}{the name of the target variable from the input data (string)}
 }
 \value{
 logit model.
