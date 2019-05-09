@@ -12,6 +12,10 @@
 #' @importFrom readr read_csv2
 #' 
 #' @export
+#' @example s
+#' \dontrun{
+#' clean_data("/data/bmarketing2.csv", target_var = "Y")
+#' }
 clean_data <- function(filename, target_var, na_threshold = 0.5, ...) {
   data <- suppressMessages(readr::read_csv(filename, ...))
   
