@@ -1,4 +1,4 @@
-#'Function to make neccessary transformation of data
+#'Transform numeric variables using the log 
 #'
 #'
 #'
@@ -7,20 +7,17 @@
 #'@param data Basic object like \code{numeric, boolean, character, NULL, factor}
 #'@param column Basic object like \code{factor}
 #'
-#'@keywords log , number2factor
+#'@keywords log
 #'
 #'@import rpart.plot 
 #'@import rpart 
 #'@import tidyverse
 #'
 #'@export logaritmic
-#'@export intonum
 #'
 #'@examples
 #'bmarketing$age<-logaritmic(bmarketing$age)
 #'bmarketing$duration<-logaritmic(bmarketing$duration)
-#'bmarketing$poutcome<-intonum(bmarketing$poutcome)
-#'bmarketing$euribor3m<-intonum(bmarketing, bmarketing$euribor3m)
 #'
 
 
@@ -32,6 +29,26 @@ x<-log(x)
   
 }
 
+#'Transform factors into numeric variables (and vice versa) as necessary
+#'
+#'
+#'
+#'
+#'@param data Basic object like \code{numeric, boolean, character, NULL, factor}
+#'@param column Basic object like \code{factor}
+#'
+#'@keywords number2factor
+#'
+#'@import rpart.plot 
+#'@import rpart 
+#'@import tidyverse
+#'
+#'@export intonum
+#'
+#'@examples
+#'bmarketing$poutcome<-intonum(bmarketing$poutcome)
+#'bmarketing$euribor3m<-intonum(bmarketing, bmarketing$euribor3m)
+#'
 
 #################Transform factors into numeric variables (and vice versa) as necessary#################
 
