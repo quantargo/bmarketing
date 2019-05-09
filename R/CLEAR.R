@@ -88,12 +88,11 @@ clear2 <- function(data,target) {
 clear3 <- function(data,target) {
 if(length(which(is.na(target)==TRUE)>length(target)/2)){
   print("There are more than 50% of Missing Value in the specified column")
-  #assign(target, NULL, envir = .GlobalEnv)
+  assign('target', NULL, envir = .GlobalEnv)
   
 } else{
   print("All okay: There are no more than 50% of Missing Value in the specified column")
 }
 }
-
 
 

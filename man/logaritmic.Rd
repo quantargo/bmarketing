@@ -2,7 +2,7 @@
 % Please edit documentation in R/Transform.R
 \name{logaritmic}
 \alias{logaritmic}
-\title{Function to make neccessary transformation of data}
+\title{Transform numeric variables using the log}
 \usage{
 logaritmic(x)
 }
@@ -14,15 +14,11 @@ logaritmic(x)
 \item{column}{Basic object like \code{factor}}
 }
 \description{
-Function to make neccessary transformation of data
+Transform numeric variables using the log
 }
 \examples{
 bmarketing$age<-logaritmic(bmarketing$age)
 bmarketing$duration<-logaritmic(bmarketing$duration)
-bmarketing$poutcome<-intonum(bmarketing$poutcome)
-bmarketing$euribor3m<-intonum(bmarketing, bmarketing$euribor3m)
 
 }
-\keyword{,}
 \keyword{log}
-\keyword{number2factor}
