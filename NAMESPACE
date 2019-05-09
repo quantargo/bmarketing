@@ -3,5 +3,4 @@
 export(clean)
 export(model)
 export(model_accuracy)
-export(plot_model)
 export(predictions)
