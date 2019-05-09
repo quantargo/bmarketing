@@ -11,8 +11,8 @@
 #'
 #' @examples
 #' 
-#'data("bmarketing")
-#'model_data <- model(dataset = bmarketing, target_var="y")
+#' data("bmarketing")
+#' model_data <- model(dataset = bmarketing, target_var="y")
 
 model_data <- function(dataset, target_var){
   rpart(as.formula(paste(target_var, "~ .")), data = dataset, model = TRUE)
