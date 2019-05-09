@@ -13,13 +13,14 @@
 #' @export
 
 transform <- function(data, column) {
-  if(is.integer(data[,column]) || is.numeric(data[,column]))
+  if(is.integer(data[,column]) || is.numeric(data[,column])) {
   # Taking care of missing data & log
     Mean <- mean(data[,column], na.rm = TRUE)
     y <- ifelse(is.na(data[,column]), Mean, data[,column])  
     
     if(min(y, na.rm = TRUE) >=0)
       y <- log(y)
+  }
   
   # Encoding categorical data
   if(is.factor(data[,column]))
