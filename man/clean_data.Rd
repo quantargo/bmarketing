@@ -4,10 +4,10 @@
 \alias{clean_data}
 \title{Cleaning function}
 \usage{
-clean_data(filename, target_var, na_threshold = 0.5, ...)
+clean_data(df, target_var, na_threshold = 0.5, ...)
 }
 \arguments{
-\item{filename}{character, filename}
+\item{df}{data.frame, data to be cleaned}
 
 \item{target_var}{character, columnname of dataframe which acts as the target variable}
 
