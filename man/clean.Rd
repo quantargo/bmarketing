@@ -17,3 +17,6 @@ Cleans a dataset: \cr
 - Give clear warnings for all other variables which contain NA’s. \cr
 - Remove any columns (and report as warning) which contain more than 50% NA’s
 }
+\examples{
+cleaned_data <- clean(bmarketing, "y")
+}
