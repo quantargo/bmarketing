@@ -3,6 +3,7 @@
 #' @param target target variable from the input data. 
 #' @param udata Input data for the model.
 #' @return A decision tree model.
+#' @importFrom rpart rpart
 #' @examples
 #' dtree(mytarget,mydata)
 
