@@ -56,7 +56,7 @@ bmarketing <- clean(x = bmarketing, t = "y")
 4) Fit a Decision Tree, plot the results, give predictions:
 
 ```{r}
-dt_model<- rpart(y ~ ., data = bmarketing)
+dt_model <- fitModel(data = bmarketing, y = 'y', modelType = 'DecisionTree')
 rpart.plot(dt_model)
 
 predictions <- predict(dt_model, bmarketing, type = "class")

@@ -11,6 +11,6 @@ transform(input)
 }
 \description{
 If data is numeric and negative \cr
-AND if data appears as non-normal with the shapiro test\cr
+AND if data appears as non-normal \cr
 the function performs a log transformation\cr
 }

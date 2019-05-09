@@ -16,7 +16,7 @@ You can install the released version of bmarketing from
 [Github](https://github.com/BalintKomjati/bmarketing)
     with:
 
-    #> Skipping install of 'bmarketing' from a github remote, the SHA1 (9a8f2c0f) has not changed since last install.
+    #> Skipping install of 'bmarketing' from a github remote, the SHA1 (b1a80ee1) has not changed since last install.
     #>   Use `force = TRUE` to force installation
 
 ## Example
@@ -47,13 +47,18 @@ bmarketing <- read.csv2("inst/bmarketing.csv",dec = ".")
 bmarketing <- clean(x = bmarketing, t = "y")
 ```
 
-4)  Fit a Decision Tree, plot the results, give predictions:
+4)  Fit a Decision Tree, plot the results, give
+predictions:
 
 <!-- end list -->
 
 ``` r
-dt_model<- rpart(y ~ ., data = bmarketing)
+dt_model <- fitModel(data = bmarketing, y = 'y', modelType = 'DecisionTree')
 rpart.plot(dt_model)
+#> Warning: Cannot retrieve the data used to build the model (so cannot determine roundint and is.binary for the variables).
+#> To silence this warning:
+#>     Call rpart.plot with roundint=FALSE,
+#>     or rebuild the rpart model with model=TRUE.
 ```
 
 <img src="man/figures/README-unnamed-chunk-6-1.png" width="100%" />
