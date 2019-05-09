@@ -8,6 +8,10 @@
 #'
 #' @return data df data.frame
 #' @export
+#' @example 
+#' \don't run{
+#' model_predict(dt_model,dataframe)
+#' }
 model_predict <- function(dt_model, data) {
   predict(dt_model, data, type = "class")
 }
