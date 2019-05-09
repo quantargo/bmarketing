@@ -18,7 +18,7 @@ translog<-function(x){
 #'
 #' A class transformation, wich converts numeric to factor and factor to numeric
 #'
-#' @param x A numeric or factor data
+#' @param var A numeric or factor data
 #' 
 #' @export
 trans <- function(var){
