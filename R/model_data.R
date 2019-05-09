@@ -4,6 +4,9 @@
 #' @param target_var Dependent variable 
 #'
 #' @return return decision tree
+#' 
+#' @importFrom rpart rpart
+#' 
 #' @export
 model_data <- function(dataset, target_var){
   
