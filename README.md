@@ -11,8 +11,8 @@ as explained below.
 ## Function Description
 
 clean\_data : This function will check if the target variable contains
-missing calues and returns an error. It also gives warnings if other
-variables contain NAs and removes thoe columns that have more than 50%
+missing values and returns an error. It also gives warnings if other
+variables contain NAs and removes those columns that have more than 50%
 NAs.
 
 transform\_data : Data transformation step transforms the numeric
