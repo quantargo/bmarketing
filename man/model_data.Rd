@@ -4,21 +4,21 @@
 \alias{model_data}
 \title{Returns the predicted classes from the decision tree}
 \usage{
-model_data(dataset, target_var)
+model_data(df, target_var)
 }
 \arguments{
-\item{dataset}{Data frame on which we want to make a model}
+\item{df}{data.frame on which we want to make a model}
 
-\item{target_var}{Dependent variable}
+\item{target_var}{character, Dependent variable}
 }
 \value{
-return decision tree
+return decision tree model
 }
 \description{
 Returns the predicted classes from the decision tree
 }
 \examples{
-
-data("bmarketing")
-model_data <- model(dataset = bmarketing, target_var="y")
+\dontrun{
+model_data(df, target_var="Y")
+}
 }
