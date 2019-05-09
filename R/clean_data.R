@@ -13,7 +13,7 @@
 #' 
 #' @export
 clean_data <- function(filename, target_var, na_threshold = 0.5, ...) {
-  data <- suppressMessages(readr::read_csv2(filename, ...))
+  data <- suppressMessages(readr::read_csv(filename, ...))
   
   stopifnot(nrow(data) > 0)
   stopifnot(target_var %in% colnames(data))

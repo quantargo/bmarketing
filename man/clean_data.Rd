@@ -13,7 +13,7 @@ clean_data(filename, target_var, na_threshold = 0.5, ...)
 
 \item{na_threshold}{numeric, threshold}
 
-\item{...}{args forwarded to \code{\link{read_csv2}}}
+\item{...}{args forwarded to \code{\link{read_csv2}}. Hint: You can edit the import column type by the col_types argument.}
 }
 \value{
 data.frame, excluding columns with too many NAs
