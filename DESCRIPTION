@@ -8,3 +8,4 @@ Maintainer: Hanna Popova <popovaas@gmail.com>
 Imports: tidyverse, rpart, rpart.plot
 Description: package for 
 License: 
+RoxygenNote: 6.1.1

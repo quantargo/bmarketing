@@ -8,7 +8,7 @@
 #'
 #'@keywords na.omit , nrow, length
 #'
-#'@import
+#'@import rpart
 #'
 #'@examples
 #'clear1(bmarketing$y)
