@@ -4,9 +4,19 @@
 \alias{transform}
 \title{Log transformation and factor transformation into numeric variables (and vice versa) as necessary.}
 \usage{
-transform(dataset)
+transform(data, column)
+}
+\arguments{
+\item{data}{A data.frame containing the target variable}
+
+\item{column}{The column, with double quotation marks which needs to be transformed}
+}
+\value{
+The column from the data frame that is returned is the transformed data
 }
 \description{
-This function applies logarithm on the sent values and transforms numerical data to categories and vice versa
-In case of null values, these are replaced with the mean of the interval for numerical data.
+\code{transform} transforms the sent data to log (for numeric) or factor transformation into numeric, as necessary.
+}
+\examples{
+transform(bmarketing, "AGE")
 }
