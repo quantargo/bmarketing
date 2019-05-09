@@ -2,7 +2,7 @@
 % Please edit documentation in R/CLEAR.R
 \name{clear3}
 \alias{clear3}
-\title{Remove any columns (and report as warning) which contain more than 50% NA’s}
+\title{Remove any columns (and report as warning) which contain more than 50 percent NA’s}
 \usage{
 clear3(data, target)
 }
@@ -12,7 +12,7 @@ clear3(data, target)
 \item{target}{Basic object like \code{numeric,int,boolean,char}}
 }
 \description{
-Remove any columns (and report as warning) which contain more than 50% NA’s
+Remove any columns (and report as warning) which contain more than 50 percent NA’s
 }
 \examples{
 clear3(bmarketing$duration)
