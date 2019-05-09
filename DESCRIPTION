@@ -1,5 +1,5 @@
 Package: bmarketing
-Title: decision tree model to predict if customer signing a term deposit
+Title: package for some marketing data analysis
 Version: 0.0.1
 Authors@R: 
     person(given = "Group 2",
