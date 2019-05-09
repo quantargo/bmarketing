@@ -45,3 +45,5 @@ translog
 trans
 
 standardize
+
+logit

@@ -42,5 +42,6 @@ Funcion documentation is accessible through ?functionname. For example, run
 \item translog
 \item trans
 \item standardize
+\item logit
 
 
