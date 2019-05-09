@@ -8,6 +8,8 @@
 #' @param x A dataframe
 #' @param t The name of the target variable column of dataframe x
 #' @examples
+#' @export
+#' 
 
 
 

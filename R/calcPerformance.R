@@ -1,7 +1,7 @@
 #' Reports model's classification accuracy measures 
 #'
 #' @param \code{y} Target variable (class or numeric)
-#' @param \code{y} Target variable (class or numeric)
+#' @param \code{y_pred} Target variable (class or numeric)
 #' @return Gives back a classification report containing the Confusion Matrix, Sensitivity, Specificity, Precision and Accuracy
 #' @examples
 #' calcPerformance(y = bmarketing$y, y_pred = predictions)

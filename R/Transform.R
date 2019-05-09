@@ -1,3 +1,14 @@
+#' Log-Tranforms input data for easy model development\cr
+#' 
+#' If data is numeric and negative \cr
+#' AND if data appears as non-normal with the shapiro test\cr
+#' the function performs a log transformation\cr
+#' 
+#' @param input dataframe
+#' @examples
+#' @export
+#' 
+
 
 #todos
 #function should give warning is a variable was log transformed
