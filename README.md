@@ -55,13 +55,12 @@ treeModel <-  model(input_data = cleanedData,target_name="y")
 
 ![](man/figures/README-unnamed-chunk-4-1.png)<!-- -->
 
-  - Getting the
-predictions
+  - Getting the predictions
 
 <!-- end list -->
 
 ``` r
-predictionData <-  predictions(dt_model = treeModel,bmarketing = cleanedData)
+predictionData <-  predictions(dt_model = treeModel,data = cleanedData)
 ```
 
   - Assessing the model accuracy
