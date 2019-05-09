@@ -28,3 +28,18 @@ trans <- function(x){
         x <- as.numeric(as.character(x))
     }
 }
+
+
+#' standardize
+#'
+#' standardize or normalize the range of independent variables or features of data
+#'
+#' @param x numeric data
+#' 
+#' @export
+standardize <- function(x){
+    if(!is.numeric(x)) stop("Input must be numeric!")    
+    x <- (x - mean(x)) / sd(x)
+    x
+}
+
