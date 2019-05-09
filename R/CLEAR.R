@@ -66,7 +66,7 @@ clear2 <- function(data,target) {
   }
 }
 
-#'Remove any columns (and report as warning) which contain more than 50% NA’s
+#'Remove any columns (and report as warning) which contain more than 50 percent NA’s
 #'
 #'
 #'
