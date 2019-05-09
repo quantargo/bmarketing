@@ -33,8 +33,10 @@ cleanData <- function( ds, targetVar, replaceNAs=FALSE )
     for(i in 1:dim(ds)[2]){
       if(is.numeric(ds[,i])){
         ds[is.na(ds[,i]),i] <- mean(ds[,i], na.rm = TRUE)
+        warning(paste(colnames(ds)[i],"has been imputed with mean values."))
       }else{
         ds[is.na(ds[,i]),i]<-"MISSING"
+        warning(paste("For variable",colnames(ds)[i],"category MISSING was defined."))
       }
     }
   }else {
