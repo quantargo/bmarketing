@@ -11,10 +11,7 @@
 #' Return the cleaned dataframe and prints warning messages in case there are any.
 #' 
 #' @export
-
-
-cleanData <- function( ds, targetVar, replaceNAs=FALSE )
-{
+cleanData <- function( ds, targetVar, replaceNAs=FALSE ){
   
   #Firstly checking if the target Variable parameter actually exists inside the dataframe.
   if (any( colnames(ds)  ==  targetVar ) == FALSE)
@@ -48,8 +45,7 @@ cleanData <- function( ds, targetVar, replaceNAs=FALSE )
     # flag[1:dim(ds)[2]]<-FALSE
     flag <- c(logical(dim(ds)[2]) )
     
-    for (i in 1:dim(ds)[2])
-    {
+    for (i in 1:dim(ds)[2]){
       
       if((nrow(ds)-nrow(na.omit(ds[i])))/nrow(ds)>0.5)
       {
@@ -60,10 +56,9 @@ cleanData <- function( ds, targetVar, replaceNAs=FALSE )
       
     } 
     
-    
     ds<-ds[!flag]
     
-    }
+  }
     
   #Return the cleaned dataframe.
   return(ds)
