@@ -9,7 +9,7 @@ predictions(dt_model, data)
 \arguments{
 \item{dt_model}{model}
 
-\item{data}{data}
+\item{data}{data the model was generated with}
 }
 \description{
 \code{predictions} returns predictions.
