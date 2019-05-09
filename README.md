@@ -13,45 +13,11 @@ cleansing, modelling and reporting tasks.
 ## Installation
 
 You can install the released version of bmarketing from
-[Github](https://github.com/BalintKomjati/bmarketing) with:
+[Github](https://github.com/BalintKomjati/bmarketing)
+    with:
 
-``` r
-devtools::install_github("BalintKomjati/bmarketing")
-#> Downloading GitHub repo BalintKomjati/bmarketing@master
-#> nortest (NA -> 1.0-4) [CRAN]
-#> Skipping 1 packages ahead of CRAN: fs
-#> Installing 1 packages: nortest
-#> Installing package into '/usr/local/lib/R/site-library'
-#> (as 'lib' is unspecified)
-#>   
-   checking for file ‘/tmp/RtmpxdcFY1/remotes828589d4dc5/BalintKomjati-bmarketing-36880bf/DESCRIPTION’ ...
-  
-✔  checking for file ‘/tmp/RtmpxdcFY1/remotes828589d4dc5/BalintKomjati-bmarketing-36880bf/DESCRIPTION’
-#> 
-  
-─  preparing ‘bmarketing’:
-#> 
-  
-   checking DESCRIPTION meta-information ...
-  
-✔  checking DESCRIPTION meta-information
-#> 
-  
-─  checking for LF line-endings in source and make files and shell scripts
-#> 
-  
-─  checking for empty or unneeded directories
-#> 
-  
-─  building ‘bmarketing_0.0.0.9000.tar.gz’
-#> 
-  
-   
-#> 
-#> Installing package into '/usr/local/lib/R/site-library'
-#> (as 'lib' is unspecified)
-library(bmarketing)
-```
+    #> Skipping install of 'bmarketing' from a github remote, the SHA1 (9a8f2c0f) has not changed since last install.
+    #>   Use `force = TRUE` to force installation
 
 ## Example
 
@@ -108,6 +74,7 @@ results <- calcPerformance(y = bmarketing$y, y_pred = predictions)
 #> y       no  yes
 #>   no  3583   85
 #>   yes  215  236
+#> [1] ""
 #> [1] "True Positive Rate (Sensitivity): 52.328 %"
 #> [1] "True Negative Rate (Specificity): 97.683 %"
 #> [1] "Precision: 73.52 %"

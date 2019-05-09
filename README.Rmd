@@ -26,7 +26,7 @@ The goal of bmarketing is to provide functions useful for data cleansing, modell
 
 You can install the released version of bmarketing from [Github](https://github.com/BalintKomjati/bmarketing) with: 
 
-```{r}
+```{r echo=FALSE}
 devtools::install_github("BalintKomjati/bmarketing")
 library(bmarketing)
 ```
