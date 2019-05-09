@@ -4,16 +4,22 @@
 \alias{model_performance}
 \title{Calculate the accuracy of the model}
 \usage{
-model_performance(data, prediction)
+model_performance(target, prediction)
 }
 \arguments{
-\item{data}{character vector, real results}
+\item{target}{vector, target values}
 
-\item{prediction}{character vector, predicted results}
+\item{prediction}{vector, predicted values}
 }
 \value{
-list, accuracy measures out of confusion matrix:
+list, measures out of confusion matrix: accuracy, sensitivity, specificity. \url{https://en.wikipedia.org/wiki/Confusion_matrix}
 }
 \description{
 Calculate the accuracy of the model
+}
+\examples{
+target <- sample(c(0, 1), 100)
+prediction <- sample(c(0, 1), 100)
+model_performance(target, prediction)
+
 }

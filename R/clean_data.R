@@ -12,7 +12,7 @@
 #' @importFrom readr read_csv2
 #' 
 #' @export
-#' @example s
+#' @examples
 #' \dontrun{
 #' data <- import_data("/data/bmarketing2.csv")
 #' clean_data(data, target_var = "Y")

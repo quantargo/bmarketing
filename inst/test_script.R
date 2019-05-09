@@ -14,4 +14,5 @@ m <- model_data(df, target_var)
 
 model_plot(m)
 
-
+target <- df[, target_var]
+predictions <- model_predict(m, df)
