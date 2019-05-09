@@ -19,4 +19,5 @@ fits the decision tree model based on
 }
 \examples{
 dtree(mytarget,mydata)
+
 }

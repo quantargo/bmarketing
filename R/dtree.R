@@ -6,6 +6,8 @@
 #' @importFrom rpart rpart
 #' @examples
 #' dtree(mytarget,mydata)
+#' 
+#' @export
 
 dtree <- function(target,udata) {  
     dt_model<-rpart(target ~ ., data = udata)
@@ -19,7 +21,8 @@ dtree <- function(target,udata) {
 #' @return a summary. :)
 #' @examples
 #' dtreesummary(mymodel)
-
+#' 
+#' @export
 dtreesummary<-function(dt_model){
   summary(dt_model)
 }
@@ -30,7 +33,8 @@ dtreesummary<-function(dt_model){
 #' @return a plot. :)
 #' @examples
 #' dtreeplot(mymodel)
-
+#' 
+#' @export
 dtreeplot<-function(dt_model) {
   rpart.plot(dt_model)
 }
@@ -43,6 +47,7 @@ dtreeplot<-function(dt_model) {
 #' @examples
 #' dtreepredict(mymodel,mydata)
 #' 
+#' @export
 dtreepredict<-function(dt_model,predictdata){
 
   predictions <- predict(dt_model, predictdata, type = "class")
@@ -58,6 +63,7 @@ dtreepredict<-function(dt_model,predictdata){
 #' @examples
 #' dtreepredict(mytarget,mypredictions)
 #' 
+#' @export
 dtreeperf<-function(target,predictions){
   accuracy<-mean(target == predictions)
   accuracy
