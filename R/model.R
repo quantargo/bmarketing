@@ -13,6 +13,8 @@
 #'@import rpart 
 #'@import tidyverse
 #'
+#'@export model
+#'
 #'@examples
 #'model(bmarketing, bmarketing$y)
 #'

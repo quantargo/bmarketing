@@ -4,16 +4,18 @@
 \alias{histplot}
 \title{Function to histogram}
 \usage{
-histplot(data)
+histplot(data, column)
 }
 \arguments{
 \item{data}{Basic object like \code{numeric, char, factor,boolean, NULL}}
+
+\item{column}{Basic object like \code{numeric}}
 }
 \description{
 Function to histogram
 }
 \examples{
-histplot(data)
+histplot(data, column)
 
 
 }

@@ -12,6 +12,9 @@
 #'@import rpart 
 #'@import tidyverse
 #'
+#'@export logaritmic
+#'@export intonum
+#'
 #'@examples
 #'logaritmic(bmarketing$age)
 #'logaritmic(bmarketing$duration)

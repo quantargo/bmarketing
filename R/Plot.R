@@ -13,6 +13,9 @@
 #'@import rpart 
 #'@import tidyverse
 #'
+#'@export histplot
+#'@export treeplot
+#'
 #'@examples
 #'histplot(data, column)
 #'

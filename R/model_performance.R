@@ -12,6 +12,8 @@
 #'@import rpart 
 #'@import tidyverse
 #'
+#'@export model_performance
+#'
 #'@examples
 #'model_performance(target, predictions)
 #'

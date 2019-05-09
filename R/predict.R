@@ -13,6 +13,8 @@
 #'@import rpart 
 #'@import tidyverse
 #'
+#'@export model_pred
+#'
 #'@examples
 #'model_pred(bmarketing, model)
 #'

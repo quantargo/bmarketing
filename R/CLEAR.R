@@ -10,6 +10,10 @@
 #'
 #'@import rpart
 #'
+#'@export clear1
+#'@export clear2
+#'@export clear3
+#'
 #'@examples
 #'clear1(bmarketing$y)
 #'clear2(bmarketing$duration)
