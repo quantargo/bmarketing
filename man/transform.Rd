@@ -18,5 +18,5 @@ The column from the data frame that is returned is the transformed data
 \code{transform} transforms the sent data to log (for numeric) or factor transformation into numeric, as necessary.
 }
 \examples{
-transform(bmarketing, "AGE")
+transform(bmarketing, "age")
 }

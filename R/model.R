@@ -1,4 +1,4 @@
-#' Runing decision tree model and ploting it results
+#'  Runing decision tree model and ploting it results
 #'
 #' \code{clean} returns a decision tree model.
 #'
@@ -17,7 +17,8 @@
 #' @export
 
 model <- function(input_data,target_name) {
-  
+  library(rpart)
+  library(rpart.plot)
   dt_model<- rpart(as.formula(paste(target_name," ~ .")), data = input_data)
   rpart.plot(dt_model)
   return (dt_model)

@@ -9,7 +9,7 @@
 #' @return The column from the data frame that is returned is the transformed data
 #'   
 #' @examples
-#' transform(bmarketing, "AGE")
+#' transform(bmarketing, "age")
 #' @export
 
 transform <- function(data, column) {
