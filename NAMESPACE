@@ -2,4 +2,5 @@
 
 export(calcPerformance)
 export(clean)
+export(fitModel)
 export(transform)

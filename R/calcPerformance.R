@@ -4,7 +4,9 @@
 #' @param \code{y_pred} Target variable (class or numeric)
 #' @return Gives back a classification report containing the Confusion Matrix, Sensitivity, Specificity, Precision and Accuracy, and a list containing the results
 #' @examples
-#' results <- calcPerformance(y = bmarketing$y, y_pred = predictions)
+#' y_example      = c(0,1,1,0)
+#' y_pred_example = c(1,1,1,0)
+#' results <- calcPerformance(y = y_example, y_pred = y_pred_example)
 #' @export
 #' 
 calcPerformance <- function(y, y_pred) {
