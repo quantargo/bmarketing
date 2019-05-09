@@ -7,11 +7,12 @@
 translog(x)
 }
 \arguments{
-\item{x}{A numeric vector
-
-#' @examples
-transform_log(exp(rnorm(7)))}
+\item{x}{A numeric vector}
 }
 \description{
 A simple log transformation
+}
+\examples{
+transform_log(exp(rnorm(7)))
+
 }

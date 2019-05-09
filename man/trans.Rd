@@ -4,10 +4,10 @@
 \alias{trans}
 \title{trans}
 \usage{
-trans(var)
+trans(x)
 }
 \arguments{
-\item{var}{A numeric or factor data}
+\item{x}{A numeric or factor data}
 }
 \description{
 A class transformation, wich converts numeric to factor and factor to numeric
