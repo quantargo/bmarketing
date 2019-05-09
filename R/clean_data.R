@@ -5,7 +5,7 @@
 #' @param filename character, filename
 #' @param target_var character, columnname of dataframe which acts as the target variable 
 #' @param ... args forwarded to \code{\link{read_csv2}}. Hint: You can edit the import column type by the col_types argument.
-#' @param na_threshold numeric, threshold
+#' @param na_threshold numeric, if NAs within a column are greater than the treshold given, this columns will be excluded
 #'
 #' @return data.frame, excluding columns with too many NAs
 #' 

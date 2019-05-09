@@ -11,7 +11,7 @@ clean_data(filename, target_var, na_threshold = 0.5, ...)
 
 \item{target_var}{character, columnname of dataframe which acts as the target variable}
 
-\item{na_threshold}{numeric, threshold}
+\item{na_threshold}{numeric, if NAs within a column are greater than the treshold given, this columns will be excluded}
 
 \item{...}{args forwarded to \code{\link{read_csv2}}. Hint: You can edit the import column type by the col_types argument.}
 }
