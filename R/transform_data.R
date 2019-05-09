@@ -1,10 +1,14 @@
 #' Tranform data 
 #' 
 #' 1. Changes factor columns to numeric, if possible
-#' 2. Apply log to user defined columns
+#' 2. Apply mean-impute to user defined columns
+#' 3. Apply log to user defined columns
+#' 4. Apply normalization to user defined columns
 #'
+#' @param cols_impute character
+#' @param cols_log character
+#' @param cols_normalize character
 #' @param df data.frame, recveived by \code{\link{clean_data}}
-#' @param cols character vector, columns to be log-transformed
 #'
 #' @return data.frame
 #' 
@@ -12,6 +16,25 @@
 #' @importFrom readr parse_double
 #' 
 #' @export
-transform_data <- function(df, cols) {
-  mutate_at(mutate_if(df, is.factor, readr::parse_double), cols, log)
+transform_data <- function(df, cols_impute, cols_log, cols_normalize) {
+  
+  res_df <- mutate_if(df, is.factor, readr::parse_double)
+  
+  if (length(cols_impute) > 0) res_df <- mutate_at(res_df, cols_impute, impute_transform)
+  if (length(cols_log) > 0) res_df <- mutate_at(res_df, cols_log, log_transform)
+  if (length(cols_normalize) > 0) res_df <- mutate_at(res_df, cols_normalize, normalize_transform)
+
+  res_df
+}
+
+impute_transform <- function(x) {
+  x
+}
+
+normalize_transform <- function(x) {
+  (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE)
+}
+
+log_transform<- function(x) {
+  log(x)
 }
