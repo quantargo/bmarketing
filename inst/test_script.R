@@ -10,7 +10,8 @@ df <- clean_data(df, target_var = "Y")
 df <- transform_data(df, c("AGE", "DURATION"))
 
 target_var <- "Y"
-model_data(df, target_var)
+m <- model_data(df, target_var)
 
+model_plot(m)
 
 

@@ -9,5 +9,5 @@
 #' 
 #' @export
 model_data <- function(dataset, target_var){
-  rpart(as.formula(paste(target_var, "~ .")), data = dataset )
+  rpart(as.formula(paste(target_var, "~ .")), data = dataset, model = TRUE)
 }
