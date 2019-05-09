@@ -1,17 +1,20 @@
 #' dtree
 #' @description fits the decision tree model based on given parameters
-#' @param target target variable from the input data. 
-#' @param udata input data for the model.
+#' @param input_data input data for the model.
+#' @param target_name target variable from the input data. 
 #' @return A decision tree model.
 #' @importFrom rpart rpart
 #' 
 #' @export
 
-dtree <- function(target,udata) {  
-    dt_model<-rpart(target ~ ., data = udata)
-    dt_model
+dtree <- function(input_data,target_name) {  
+  library(rpart)
+  library(rpart.plot)
+  
+  dt_model<- rpart(y ~ ., data = input_data)
+  rpart.plot(dt_model)
+  return (dt_model)
 }
-
 
 #' dtreesummary
 #' @description returns the summary of the chosen model
