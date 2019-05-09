@@ -4,12 +4,12 @@
 \alias{dtree}
 \title{dtree}
 \usage{
-dtree(target, udata)
+dtree(udata, target)
 }
 \arguments{
-\item{target}{target variable from the input data.}
-
 \item{udata}{input data for the model.}
+
+\item{target}{the name of the target variable from the input data (string) for example: target_name="Y"}
 }
 \value{
 A decision tree model.
