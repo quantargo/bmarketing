@@ -8,10 +8,10 @@
 #' transform_log(exp(rnorm(7)))
 #' 
 #' @export
-translog<-function(var){
+translog<-function(x){
     if ( !is.numeric(x) ) stop("Input must be numeric!")
     if ( any(x<0) ) stop("Input must not be negative!")
-    var <- log(var)
+    x <- log(x)
 }
 
 #' trans
