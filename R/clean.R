@@ -13,12 +13,12 @@
 #'   
 #' @examples
 #' data(bmarketing)
-#' clean(bmarketing)
+#' clean(bmarketing,"y")
 #' @export
 
-clean<-function(data){
+clean<-function(data,target_name){
   
-  if(sum(is.na(data$y))>0) stop("Target variable y contains missing values (NA's)")
+  if(sum(is.na(data[,target_name]))>0) stop("Target variable y contains missing values (NA's)")
   
   for(col in names(data)){
     

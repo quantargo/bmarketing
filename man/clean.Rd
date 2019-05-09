@@ -4,7 +4,7 @@
 \alias{clean}
 \title{Cleanin Data}
 \usage{
-clean(data)
+clean(data, target_name)
 }
 \arguments{
 \item{data}{A data.frame containing a target variable named y}
@@ -23,5 +23,5 @@ This means:
 }
 \examples{
 data(bmarketing)
-clean(bmarketing)
+clean(bmarketing,"y")
 }

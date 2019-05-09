@@ -2,7 +2,8 @@
 #'
 #' \code{clean} returns a decision tree model.
 #'
-#' @param data A data.frame containing a target variable named which name is defined as input argument
+#' @param input_data A data.frame containing a target variable named which name is defined as input argument
+#' @param target_name A character containing the name of the target variable
 #' @return A decision tree model 
 #'
 #' This means:

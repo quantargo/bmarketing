@@ -7,7 +7,9 @@
 model(input_data, target_name)
 }
 \arguments{
-\item{data}{A data.frame containing a target variable named which name is defined as input argument}
+\item{input_data}{A data.frame containing a target variable named which name is defined as input argument}
+
+\item{target_name}{A character containing the name of the target variable}
 }
 \value{
 A decision tree model 
