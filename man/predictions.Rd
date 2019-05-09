@@ -9,7 +9,7 @@ predictions(dt_model, data)
 \arguments{
 \item{dt_model}{model}
 
-\item{bmarketing}{data}
+\item{data}{data}
 }
 \description{
 \code{predictions} returns predictions.

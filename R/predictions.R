@@ -3,7 +3,7 @@
 #' \code{predictions} returns predictions.
 #'
 #' @param dt_model model
-#' @param bmarketing data
+#' @param data data the model was generated with
 #' @examples
 #' data("bmarketing")
 #' dt_model <- model(input_data = bmarketing,target_name="y")
