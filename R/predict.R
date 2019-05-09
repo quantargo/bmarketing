@@ -9,7 +9,7 @@
 #'
 #'@keywords model, decision tree, prediction
 #'
-#'@import rpart, tidyverse
+#'@import rpart tidyverse
 #'
 #'@examples
 #'model_pred(bmarketing, model)
