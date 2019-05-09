@@ -15,7 +15,3 @@ a plot. :)
 \description{
 returns the plot of the chosen decision tree model
 }
-\examples{
-dtreeplot(mymodel)
-
-}

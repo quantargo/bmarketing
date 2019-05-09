@@ -13,6 +13,6 @@ translog(x)
 A simple log transformation
 }
 \examples{
-transform_log(exp(rnorm(7)))
+translog(exp(rnorm(7)))
 
 }

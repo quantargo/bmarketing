@@ -17,7 +17,3 @@ accuracy
 \description{
 checks model accuracy
 }
-\examples{
-dtreepredict(mytarget,mypredictions)
-
-}

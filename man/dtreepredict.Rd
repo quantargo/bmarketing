@@ -17,7 +17,3 @@ predictions
 \description{
 returns the prediction
 }
-\examples{
-dtreepredict(mymodel,mydata)
-
-}

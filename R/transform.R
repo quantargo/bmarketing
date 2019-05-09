@@ -5,7 +5,7 @@
 #' @param x A numeric vector
 #' 
 #' @examples
-#' transform_log(exp(rnorm(7)))
+#' translog(exp(rnorm(7)))
 #' 
 #' @export
 translog<-function(x){

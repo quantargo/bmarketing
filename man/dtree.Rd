@@ -9,15 +9,11 @@ dtree(target, udata)
 \arguments{
 \item{target}{target variable from the input data.}
 
-\item{udata}{Input data for the model.}
+\item{udata}{input data for the model.}
 }
 \value{
 A decision tree model.
 }
 \description{
-fits the decision tree model based on
-}
-\examples{
-dtree(mytarget,mydata)
-
+fits the decision tree model based on given parameters
 }

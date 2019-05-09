@@ -15,7 +15,3 @@ a summary. :)
 \description{
 returns the summary of the chosen model
 }
-\examples{
-dtreesummary(mymodel)
-
-}
