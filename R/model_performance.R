@@ -3,7 +3,7 @@
 #' @param data character vector, real results
 #' @param prediction character vector, predicted results
 #'
-#' @return numeric, accuracy
+#' @return list, accuracy measures out of confusion matrix
 #' @export
 model_performance <- function(data, prediction) {
   cm <- table(data, prediction) 
