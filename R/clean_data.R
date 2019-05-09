@@ -1,6 +1,6 @@
 #' Cleaning function
 #' 
-#' Data is read in from a csv file using \code{\link{read_csv2}}
+#' Data is cleand
 #'
 #' @param df data.frame, data to be cleaned
 #' @param target_var character, columnname of dataframe which acts as the target variable 
