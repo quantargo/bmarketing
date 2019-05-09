@@ -64,6 +64,6 @@ predictions <- predict(dt_model, bmarketing, type = "class")
 
 5) Finally, you can create a report for model performance:
 ```{r}
-calcPerformance(y = bmarketing$y, y_pred = predictions)
+results <- calcPerformance(y = bmarketing$y, y_pred = predictions)
 ```
 

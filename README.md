@@ -17,8 +17,39 @@ You can install the released version of bmarketing from
 
 ``` r
 devtools::install_github("BalintKomjati/bmarketing")
-#> Skipping install of 'bmarketing' from a github remote, the SHA1 (1778be4c) has not changed since last install.
-#>   Use `force = TRUE` to force installation
+#> Downloading GitHub repo BalintKomjati/bmarketing@master
+#> nortest (NA -> 1.0-4) [CRAN]
+#> Skipping 1 packages ahead of CRAN: fs
+#> Installing 1 packages: nortest
+#> Installing package into '/usr/local/lib/R/site-library'
+#> (as 'lib' is unspecified)
+#>   
+   checking for file ‘/tmp/RtmpxdcFY1/remotes828589d4dc5/BalintKomjati-bmarketing-36880bf/DESCRIPTION’ ...
+  
+✔  checking for file ‘/tmp/RtmpxdcFY1/remotes828589d4dc5/BalintKomjati-bmarketing-36880bf/DESCRIPTION’
+#> 
+  
+─  preparing ‘bmarketing’:
+#> 
+  
+   checking DESCRIPTION meta-information ...
+  
+✔  checking DESCRIPTION meta-information
+#> 
+  
+─  checking for LF line-endings in source and make files and shell scripts
+#> 
+  
+─  checking for empty or unneeded directories
+#> 
+  
+─  building ‘bmarketing_0.0.0.9000.tar.gz’
+#> 
+  
+   
+#> 
+#> Installing package into '/usr/local/lib/R/site-library'
+#> (as 'lib' is unspecified)
 library(bmarketing)
 ```
 
@@ -71,7 +102,7 @@ predictions <- predict(dt_model, bmarketing, type = "class")
 <!-- end list -->
 
 ``` r
-calcPerformance(y = bmarketing$y, y_pred = predictions)
+results <- calcPerformance(y = bmarketing$y, y_pred = predictions)
 #> [1] "Confusion matrix"
 #>      y_pred
 #> y       no  yes

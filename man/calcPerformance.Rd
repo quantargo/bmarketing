@@ -12,11 +12,11 @@ calcPerformance(y, y_pred)
 \item{\code{y_pred}}{Target variable (class or numeric)}
 }
 \value{
-Gives back a classification report containing the Confusion Matrix, Sensitivity, Specificity, Precision and Accuracy
+Gives back a classification report containing the Confusion Matrix, Sensitivity, Specificity, Precision and Accuracy, and a list containing the results
 }
 \description{
 Reports model's classification accuracy measures
 }
 \examples{
-calcPerformance(y = bmarketing$y, y_pred = predictions)
+results <- calcPerformance(y = bmarketing$y, y_pred = predictions)
 }
