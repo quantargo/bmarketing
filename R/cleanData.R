@@ -33,6 +33,8 @@ cleanData <- function( ds, targetVar, replaceNAs=FALSE )
     for(i in 1:dim(ds)[2]){
       if(is.numeric(ds[,i])){
         ds[is.na(ds[,i]),i] <- mean(ds[,i], na.rm = TRUE)
+      }else{
+        ds[is.na(ds[,i]),i]<-"MISSING"
       }
     }
   }else {
