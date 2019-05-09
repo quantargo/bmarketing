@@ -26,7 +26,7 @@ clean<-function(data){
       
       if(sum(is.na(data[,col]))/nrow(data) > 0.5){
         
-        data <- subset(data ,remove = col)
+        data <- data[,!(names(data)==col)]
         warning(paste0("Variable ",col," removed due to more than 50% NA's"))
        
       }else{
